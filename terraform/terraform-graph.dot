@@ -1,0 +1,143 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.azurerm_resource_group.aks_nodes" [label="data.azurerm_resource_group.aks_nodes"];
+  subgraph "cluster_module.acr" {
+    label = "module.acr"
+    fontname = "sans-serif"
+    "module.acr.azurerm_container_registry.gamevault" [label="azurerm_container_registry.gamevault"];
+  }
+  subgraph "cluster_module.aks" {
+    label = "module.aks"
+    fontname = "sans-serif"
+    "module.aks.azurerm_kubernetes_cluster.gamevault" [label="azurerm_kubernetes_cluster.gamevault"];
+    "module.aks.azurerm_role_assignment.acr_pull" [label="azurerm_role_assignment.acr_pull"];
+  }
+  subgraph "cluster_module.alb_controller" {
+    label = "module.alb_controller"
+    fontname = "sans-serif"
+    "module.alb_controller.azurerm_application_load_balancer.gamevault" [label="azurerm_application_load_balancer.gamevault"];
+    "module.alb_controller.azurerm_application_load_balancer_frontend.gamevault" [label="azurerm_application_load_balancer_frontend.gamevault"];
+    "module.alb_controller.azurerm_application_load_balancer_subnet_association.gamevault" [label="azurerm_application_load_balancer_subnet_association.gamevault"];
+    "module.alb_controller.azurerm_federated_identity_credential.alb_controller" [label="azurerm_federated_identity_credential.alb_controller"];
+    "module.alb_controller.azurerm_role_assignment.aks_node_group_reader" [label="azurerm_role_assignment.aks_node_group_reader"];
+    "module.alb_controller.azurerm_role_assignment.alb_configuration_manager" [label="azurerm_role_assignment.alb_configuration_manager"];
+    "module.alb_controller.azurerm_role_assignment.subnet_network_contributor" [label="azurerm_role_assignment.subnet_network_contributor"];
+    "module.alb_controller.azurerm_user_assigned_identity.alb_controller" [label="azurerm_user_assigned_identity.alb_controller"];
+    "module.alb_controller.helm_release.alb_controller" [label="helm_release.alb_controller"];
+  }
+  subgraph "cluster_module.application_gateway" {
+    label = "module.application_gateway"
+    fontname = "sans-serif"
+    "module.application_gateway.azurerm_application_gateway.gamevault" [label="azurerm_application_gateway.gamevault"];
+  }
+  subgraph "cluster_module.gamevault-kubernetes" {
+    label = "module.gamevault-kubernetes"
+    fontname = "sans-serif"
+    "module.gamevault-kubernetes.kubernetes_config_map.gamevault" [label="kubernetes_config_map.gamevault"];
+    "module.gamevault-kubernetes.kubernetes_deployment.api" [label="kubernetes_deployment.api"];
+    "module.gamevault-kubernetes.kubernetes_deployment.postgres" [label="kubernetes_deployment.postgres"];
+    "module.gamevault-kubernetes.kubernetes_deployment.redis" [label="kubernetes_deployment.redis"];
+    "module.gamevault-kubernetes.kubernetes_deployment.worker" [label="kubernetes_deployment.worker"];
+    "module.gamevault-kubernetes.kubernetes_horizontal_pod_autoscaler_v2.api" [label="kubernetes_horizontal_pod_autoscaler_v2.api"];
+    "module.gamevault-kubernetes.kubernetes_horizontal_pod_autoscaler_v2.worker" [label="kubernetes_horizontal_pod_autoscaler_v2.worker"];
+    "module.gamevault-kubernetes.kubernetes_namespace.gamevault" [label="kubernetes_namespace.gamevault"];
+    "module.gamevault-kubernetes.kubernetes_network_policy.postgres" [label="kubernetes_network_policy.postgres"];
+    "module.gamevault-kubernetes.kubernetes_network_policy.redis" [label="kubernetes_network_policy.redis"];
+    "module.gamevault-kubernetes.kubernetes_persistent_volume_claim.postgres" [label="kubernetes_persistent_volume_claim.postgres"];
+    "module.gamevault-kubernetes.kubernetes_role.gamevault" [label="kubernetes_role.gamevault"];
+    "module.gamevault-kubernetes.kubernetes_role_binding.gamevault" [label="kubernetes_role_binding.gamevault"];
+    "module.gamevault-kubernetes.kubernetes_secret.postgres" [label="kubernetes_secret.postgres"];
+    "module.gamevault-kubernetes.kubernetes_service.api" [label="kubernetes_service.api"];
+    "module.gamevault-kubernetes.kubernetes_service.postgres" [label="kubernetes_service.postgres"];
+    "module.gamevault-kubernetes.kubernetes_service.redis" [label="kubernetes_service.redis"];
+    "module.gamevault-kubernetes.kubernetes_service_account.gamevault" [label="kubernetes_service_account.gamevault"];
+  }
+  subgraph "cluster_module.gateway_api" {
+    label = "module.gateway_api"
+    fontname = "sans-serif"
+    "module.gateway_api.kubernetes_manifest.gateway" [label="kubernetes_manifest.gateway"];
+    "module.gateway_api.kubernetes_manifest.http_route" [label="kubernetes_manifest.http_route"];
+  }
+  subgraph "cluster_module.network" {
+    label = "module.network"
+    fontname = "sans-serif"
+    "module.network.azurerm_network_security_group.aks" [label="azurerm_network_security_group.aks"];
+    "module.network.azurerm_network_security_rule.allow_http" [label="azurerm_network_security_rule.allow_http"];
+    "module.network.azurerm_network_security_rule.allow_https" [label="azurerm_network_security_rule.allow_https"];
+    "module.network.azurerm_subnet.aks" [label="azurerm_subnet.aks"];
+    "module.network.azurerm_subnet.alb" [label="azurerm_subnet.alb"];
+    "module.network.azurerm_subnet_network_security_group_association.aks" [label="azurerm_subnet_network_security_group_association.aks"];
+    "module.network.azurerm_virtual_network.gamevault" [label="azurerm_virtual_network.gamevault"];
+  }
+  subgraph "cluster_module.public_ip" {
+    label = "module.public_ip"
+    fontname = "sans-serif"
+    "module.public_ip.azurerm_public_ip.gamevault" [label="azurerm_public_ip.gamevault"];
+  }
+  subgraph "cluster_module.resource_group" {
+    label = "module.resource_group"
+    fontname = "sans-serif"
+    "module.resource_group.azurerm_resource_group.gamevault" [label="azurerm_resource_group.gamevault"];
+  }
+  subgraph "cluster_module.storage" {
+    label = "module.storage"
+    fontname = "sans-serif"
+    "module.storage.azurerm_storage_account.gamevault" [label="azurerm_storage_account.gamevault"];
+    "module.storage.azurerm_storage_share.gamevault" [label="azurerm_storage_share.gamevault"];
+  }
+  "data.azurerm_resource_group.aks_nodes" -> "module.aks.azurerm_kubernetes_cluster.gamevault";
+  "module.acr.azurerm_container_registry.gamevault" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.aks.azurerm_kubernetes_cluster.gamevault" -> "module.network.azurerm_subnet.aks";
+  "module.aks.azurerm_role_assignment.acr_pull" -> "module.acr.azurerm_container_registry.gamevault";
+  "module.aks.azurerm_role_assignment.acr_pull" -> "module.aks.azurerm_kubernetes_cluster.gamevault";
+  "module.alb_controller.azurerm_application_load_balancer.gamevault" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.alb_controller.azurerm_application_load_balancer_frontend.gamevault" -> "module.alb_controller.azurerm_application_load_balancer.gamevault";
+  "module.alb_controller.azurerm_application_load_balancer_subnet_association.gamevault" -> "module.alb_controller.azurerm_application_load_balancer.gamevault";
+  "module.alb_controller.azurerm_application_load_balancer_subnet_association.gamevault" -> "module.network.azurerm_subnet.alb";
+  "module.alb_controller.azurerm_federated_identity_credential.alb_controller" -> "module.aks.azurerm_kubernetes_cluster.gamevault";
+  "module.alb_controller.azurerm_federated_identity_credential.alb_controller" -> "module.alb_controller.azurerm_user_assigned_identity.alb_controller";
+  "module.alb_controller.azurerm_role_assignment.aks_node_group_reader" -> "data.azurerm_resource_group.aks_nodes";
+  "module.alb_controller.azurerm_role_assignment.aks_node_group_reader" -> "module.alb_controller.azurerm_user_assigned_identity.alb_controller";
+  "module.alb_controller.azurerm_role_assignment.alb_configuration_manager" -> "module.alb_controller.azurerm_user_assigned_identity.alb_controller";
+  "module.alb_controller.azurerm_role_assignment.subnet_network_contributor" -> "module.alb_controller.azurerm_user_assigned_identity.alb_controller";
+  "module.alb_controller.azurerm_role_assignment.subnet_network_contributor" -> "module.network.azurerm_subnet.alb";
+  "module.alb_controller.azurerm_user_assigned_identity.alb_controller" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.alb_controller.helm_release.alb_controller" -> "module.alb_controller.azurerm_user_assigned_identity.alb_controller";
+  "module.application_gateway.azurerm_application_gateway.gamevault" -> "module.network.azurerm_subnet.alb";
+  "module.application_gateway.azurerm_application_gateway.gamevault" -> "module.public_ip.azurerm_public_ip.gamevault";
+  "module.gamevault-kubernetes.kubernetes_config_map.gamevault" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_deployment.api" -> "module.gamevault-kubernetes.kubernetes_config_map.gamevault";
+  "module.gamevault-kubernetes.kubernetes_deployment.api" -> "module.gamevault-kubernetes.kubernetes_service_account.gamevault";
+  "module.gamevault-kubernetes.kubernetes_deployment.postgres" -> "module.gamevault-kubernetes.kubernetes_persistent_volume_claim.postgres";
+  "module.gamevault-kubernetes.kubernetes_deployment.postgres" -> "module.gamevault-kubernetes.kubernetes_secret.postgres";
+  "module.gamevault-kubernetes.kubernetes_deployment.redis" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_deployment.worker" -> "module.gamevault-kubernetes.kubernetes_config_map.gamevault";
+  "module.gamevault-kubernetes.kubernetes_deployment.worker" -> "module.gamevault-kubernetes.kubernetes_secret.postgres";
+  "module.gamevault-kubernetes.kubernetes_horizontal_pod_autoscaler_v2.api" -> "module.gamevault-kubernetes.kubernetes_deployment.api";
+  "module.gamevault-kubernetes.kubernetes_horizontal_pod_autoscaler_v2.worker" -> "module.gamevault-kubernetes.kubernetes_deployment.worker";
+  "module.gamevault-kubernetes.kubernetes_network_policy.postgres" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_network_policy.redis" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_persistent_volume_claim.postgres" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_role.gamevault" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_role_binding.gamevault" -> "module.gamevault-kubernetes.kubernetes_role.gamevault";
+  "module.gamevault-kubernetes.kubernetes_role_binding.gamevault" -> "module.gamevault-kubernetes.kubernetes_service_account.gamevault";
+  "module.gamevault-kubernetes.kubernetes_secret.postgres" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_service.api" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_service.postgres" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_service.redis" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gamevault-kubernetes.kubernetes_service_account.gamevault" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gateway_api.kubernetes_manifest.gateway" -> "module.gamevault-kubernetes.kubernetes_namespace.gamevault";
+  "module.gateway_api.kubernetes_manifest.http_route" -> "module.gamevault-kubernetes.kubernetes_service.api";
+  "module.network.azurerm_network_security_group.aks" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.network.azurerm_network_security_rule.allow_http" -> "module.network.azurerm_network_security_group.aks";
+  "module.network.azurerm_network_security_rule.allow_https" -> "module.network.azurerm_network_security_group.aks";
+  "module.network.azurerm_subnet.aks" -> "module.network.azurerm_virtual_network.gamevault";
+  "module.network.azurerm_subnet.alb" -> "module.network.azurerm_virtual_network.gamevault";
+  "module.network.azurerm_subnet_network_security_group_association.aks" -> "module.network.azurerm_network_security_group.aks";
+  "module.network.azurerm_subnet_network_security_group_association.aks" -> "module.network.azurerm_subnet.aks";
+  "module.network.azurerm_virtual_network.gamevault" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.public_ip.azurerm_public_ip.gamevault" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.storage.azurerm_storage_account.gamevault" -> "module.resource_group.azurerm_resource_group.gamevault";
+  "module.storage.azurerm_storage_share.gamevault" -> "module.storage.azurerm_storage_account.gamevault";
+}

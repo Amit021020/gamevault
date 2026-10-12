@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gamevault-ingress
+  namespace: gamevault
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: 
+      - gamevault.local
+      secretName: gamevault-tls
+  rules:
+    - host: gamevault.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api-service
+                port:
+                  number: 8000
+     
+            
+            

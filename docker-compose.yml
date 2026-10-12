@@ -1,0 +1,85 @@
+services:
+
+  Postgres-gamevault:
+    image: postgres:18-alpine
+
+    container_name: Postgres-gamevault
+
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: mysecretpass
+      POSTGRES_DB: gamevault
+
+    volumes:
+      - gamevault-volume:/var/lib/postgresql
+
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user", "-d", "gamevault"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  gamevault-api:
+    build: .
+
+    container_name: gamevault-api
+
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+    environment:
+      DATABASE_HOST: Postgres-gamevault
+      DATABASE_PORT: 5432
+      DATABASE_NAME: gamevault
+      DATABASE_USER: user
+      DATABASE_PASSWORD: mysecretpass
+
+    depends_on:
+      Postgres-gamevault:
+        condition: service_healthy
+
+    ports:
+      - "8000:8000"
+
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  redis-gamevault:
+    image: redis:latest
+
+    container_name: redis-gamevault
+
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  gamevault-worker:
+    build: ./worker
+
+    container_name: gamevault-worker
+
+    environment:
+      REDIS_HOST: redis-gamevault
+      REDIS_PORT: 6379
+      REDIS_QUEUE: gamevault_queue
+
+      POSTGRES_HOST: Postgres-gamevault
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: gamevault
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: mysecretpass
+
+    depends_on:
+      redis-gamevault:
+        condition: service_healthy
+
+      Postgres-gamevault:
+        condition: service_healthy
+
+volumes:
+  gamevault-volume:

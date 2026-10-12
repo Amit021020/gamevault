@@ -1,0 +1,79 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gamevault-deployment
+  namespace: gamevault
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gamevault-api
+  template:
+    metadata:
+      labels:
+        app: gamevault-api
+    spec:
+      serviceAccountName: gamevault-api
+
+      containers:
+        - name: gamevault-api
+          image: gamevault-api:v3
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: DATABASE_HOST
+            - name: DATABASE_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: DATABASE_USER
+            - name: DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config  
+                  key: DATABASE_NAME
+            - name: DATABASE_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: DATABASE_PORT
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: gamevault-secret
+                  key: DATABASE_PASSWORD
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: REDIS_HOST
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: REDIS_PORT
+            
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

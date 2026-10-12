@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deployment
+  namespace: gamevault
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: worker-gamevault
+  template:
+    metadata:
+      labels:
+        app: worker-gamevault
+    spec:
+      containers:
+        - name: worker-gamevault
+          image: worker-gamevault:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: REDIS_HOST
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: REDIS_PORT
+            - name: QUEUE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: QUEUE_NAME
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

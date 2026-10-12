@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic[email]
+dotenv
+prometheus-fastapi-instrumentator
+httpx
+pytest
+pwdlib[argon2]

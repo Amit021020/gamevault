@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  namespace: gamevault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-gamevault
+  template:
+    metadata:
+      labels:
+        app: redis-gamevault
+    spec:
+      containers:
+        - name: redis-gamevault
+          image: redis:latest
+          ports:
+            - containerPort: 6379

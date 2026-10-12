@@ -1,0 +1,45 @@
+cat > .gitignore <<'EOF'
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*privatekey*
+*.crt
+.aws/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Kubernetes and local configuration
+kubeconfig
+.kube/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+EOF

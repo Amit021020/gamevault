@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: gamevault-api-role
+
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: gamevault-api-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: gamevault-api
+roleRef:
+  kind: Role
+  apiGroup: rbac.authorization.k8s.io
+  name: gamevault-api-role

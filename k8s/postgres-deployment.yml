@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  namespace: gamevault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-gamevault
+  template:
+    metadata:
+      labels:
+        app: postgres-gamevault
+    spec:
+      containers:
+        - name: postgres-gamevault
+          image: postgres:18-alpine
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: DATABASE_USER
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: gamevault-config
+                  key: DATABASE_NAME
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: gamevault-secret
+                  key: DATABASE_PASSWORD
+          volumeMounts:
+            - name: gamevault-volume
+              mountPath: /var/lib/postgresql
+          ports:
+            - containerPort: 5432
+      volumes:
+        - name: gamevault-volume
+          persistentVolumeClaim:
+            claimName: gamevault-pvc

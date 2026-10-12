@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: gamevault-service-monitor
+  namespace: gamevault
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: gamevault-api-service
+  endpoints:
+    - interval: 30s
+      port: http 
+      path: /metrics
+    

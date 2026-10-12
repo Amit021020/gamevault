@@ -1,0 +1,4431 @@
+{
+  "version": 4,
+  "terraform_version": "1.16.5",
+  "serial": 164,
+  "lineage": "56bd75ea-b19c-6e6e-4048-26e041d1ec4a",
+  "outputs": {
+    "alb_controller_helm_namespace": {
+      "value": "kube-system",
+      "type": "string"
+    },
+    "alb_controller_helm_release": {
+      "value": "aws-load-balancer-controller",
+      "type": "string"
+    },
+    "alb_controller_iam_policy_arn": {
+      "value": "arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy",
+      "type": "string"
+    },
+    "alb_controller_iam_role_arn": {
+      "value": "arn:aws:iam::048364544760:role/gamevault-aws-load-balancer-controller",
+      "type": "string"
+    },
+    "alb_controller_iam_role_name": {
+      "value": "gamevault-aws-load-balancer-controller",
+      "type": "string"
+    },
+    "alb_controller_oidc_provider_arn": {
+      "value": "arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776",
+      "type": "string"
+    },
+    "alb_controller_service_account_name": {
+      "value": "aws-load-balancer-controller",
+      "type": "string"
+    },
+    "alb_security_group_id": {
+      "value": "sg-0eab9e7e1e82d0ddf",
+      "type": "string"
+    },
+    "api_deployment_name": {
+      "value": "gamevault-api",
+      "type": "string"
+    },
+    "api_hpa_name": {
+      "value": "gamevault-api-hpa",
+      "type": "string"
+    },
+    "api_replicas": {
+      "value": "3",
+      "type": "string"
+    },
+    "ebs_csi_driver_addon_name": {
+      "value": "aws-ebs-csi-driver",
+      "type": "string"
+    },
+    "ebs_csi_driver_role_arn": {
+      "value": "arn:aws:iam::048364544760:role/gamevault-ebs-csi-driver",
+      "type": "string"
+    },
+    "ecr_api_repository_arn": {
+      "value": "arn:aws:ecr:ap-south-1:048364544760:repository/gamevault-api",
+      "type": "string"
+    },
+    "ecr_api_repository_name": {
+      "value": "gamevault-api",
+      "type": "string"
+    },
+    "ecr_api_repository_url": {
+      "value": "048364544760.dkr.ecr.ap-south-1.amazonaws.com/gamevault-api",
+      "type": "string"
+    },
+    "ecr_worker_repository_arn": {
+      "value": "arn:aws:ecr:ap-south-1:048364544760:repository/gamevault-worker",
+      "type": "string"
+    },
+    "ecr_worker_repository_name": {
+      "value": "gamevault-worker",
+      "type": "string"
+    },
+    "ecr_worker_repository_url": {
+      "value": "048364544760.dkr.ecr.ap-south-1.amazonaws.com/gamevault-worker",
+      "type": "string"
+    },
+    "eks_cluster_arn": {
+      "value": "arn:aws:eks:ap-south-1:048364544760:cluster/gamevault-eks",
+      "type": "string"
+    },
+    "eks_cluster_endpoint": {
+      "value": "https://62C37CB5359D894B9D6666A7839D5776.gr7.ap-south-1.eks.amazonaws.com",
+      "type": "string"
+    },
+    "eks_cluster_id": {
+      "value": "gamevault-eks",
+      "type": "string"
+    },
+    "eks_cluster_name": {
+      "value": "gamevault-eks",
+      "type": "string"
+    },
+    "eks_kubernetes_version": {
+      "value": "1.35",
+      "type": "string"
+    },
+    "eks_node_group_name": {
+      "value": "gamevault-eks-nodes",
+      "type": "string"
+    },
+    "eks_oidc_issuer_url": {
+      "value": "https://oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776",
+      "type": "string"
+    },
+    "gamevault_namespace": {
+      "value": "gamevault",
+      "type": "string"
+    },
+    "ingress_name": {
+      "value": "gamevault-ingress",
+      "type": "string"
+    },
+    "internet_gateway_id": {
+      "value": "igw-0ac1b25c9fff49b68",
+      "type": "string"
+    },
+    "postgres_database": {
+      "value": "gamevault",
+      "type": "string"
+    },
+    "postgres_service_name": {
+      "value": "postgres-gamevault",
+      "type": "string"
+    },
+    "postgres_service_port": {
+      "value": 5432,
+      "type": "number"
+    },
+    "postgres_username": {
+      "value": "gamevault",
+      "type": "string"
+    },
+    "private_subnet_ids": {
+      "value": [
+        "subnet-043eb3f0a2e294f23",
+        "subnet-050c5bcb2a9a4234b"
+      ],
+      "type": [
+        "tuple",
+        [
+          "string",
+          "string"
+        ]
+      ]
+    },
+    "public_subnet_ids": {
+      "value": [
+        "subnet-0e33ac613d1b803c4",
+        "subnet-0b48a41da7c1f657f"
+      ],
+      "type": [
+        "tuple",
+        [
+          "string",
+          "string"
+        ]
+      ]
+    },
+    "service_account_name": {
+      "value": "gamevault-service-account",
+      "type": "string"
+    },
+    "vpc_cidr": {
+      "value": "10.0.0.0/16",
+      "type": "string"
+    },
+    "vpc_id": {
+      "value": "vpc-00b6701d213f4fe87",
+      "type": "string"
+    },
+    "worker_deployment_name": {
+      "value": "gamevault-worker",
+      "type": "string"
+    },
+    "worker_hpa_name": {
+      "value": "gamevault-worker-hpa",
+      "type": "string"
+    },
+    "worker_replicas": {
+      "value": "3",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "module": "module.alb_controller",
+      "mode": "data",
+      "type": "aws_caller_identity",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "account_id": "048364544760",
+            "arn": "arn:aws:iam::048364544760:user/gamevault-terraform",
+            "id": "048364544760",
+            "user_id": "AIDAQWQWAML4IBFRG6T7W"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "alb_controller_assume_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "1969630242",
+            "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRoleWithWebIdentity\",\n      \"Principal\": {\n        \"Federated\": \"arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776\"\n      },\n      \"Condition\": {\n        \"StringEquals\": {\n          \"oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:aud\": \"sts.amazonaws.com\",\n          \"oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:sub\": \"system:serviceaccount:kube-system:aws-load-balancer-controller\"\n        }\n      }\n    }\n  ]\n}",
+            "minified_json": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"sts:AssumeRoleWithWebIdentity\",\"Principal\":{\"Federated\":\"arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776\"},\"Condition\":{\"StringEquals\":{\"oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:aud\":\"sts.amazonaws.com\",\"oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:sub\":\"system:serviceaccount:kube-system:aws-load-balancer-controller\"}}}]}",
+            "override_json": null,
+            "override_policy_documents": null,
+            "policy_id": null,
+            "source_json": null,
+            "source_policy_documents": null,
+            "statement": [
+              {
+                "actions": [
+                  "sts:AssumeRoleWithWebIdentity"
+                ],
+                "condition": [
+                  {
+                    "test": "StringEquals",
+                    "values": [
+                      "sts.amazonaws.com"
+                    ],
+                    "variable": "oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:aud"
+                  },
+                  {
+                    "test": "StringEquals",
+                    "values": [
+                      "system:serviceaccount:kube-system:aws-load-balancer-controller"
+                    ],
+                    "variable": "oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:sub"
+                  }
+                ],
+                "effect": "Allow",
+                "not_actions": [],
+                "not_principals": [],
+                "not_resources": [],
+                "principals": [
+                  {
+                    "identifiers": [
+                      "arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776"
+                    ],
+                    "type": "Federated"
+                  }
+                ],
+                "resources": [],
+                "sid": ""
+              }
+            ],
+            "version": "2012-10-17"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "data",
+      "type": "tls_certificate",
+      "name": "eks",
+      "provider": "provider[\"registry.terraform.io/hashicorp/tls\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "certificates": [
+              {
+                "cert_pem": "-----BEGIN CERTIFICATE-----\nMIIEkjCCA3qgAwIBAgITBn+USionzfP6wq4rAfkI7rnExjANBgkqhkiG9w0BAQsF\nADCBmDELMAkGA1UEBhMCVVMxEDAOBgNVBAgTB0FyaXpvbmExEzARBgNVBAcTClNj\nb3R0c2RhbGUxJTAjBgNVBAoTHFN0YXJmaWVsZCBUZWNobm9sb2dpZXMsIEluYy4x\nOzA5BgNVBAMTMlN0YXJmaWVsZCBTZXJ2aWNlcyBSb290IENlcnRpZmljYXRlIEF1\ndGhvcml0eSAtIEcyMB4XDTE1MDUyNTEyMDAwMFoXDTM3MTIzMTAxMDAwMFowOTEL\nMAkGA1UEBhMCVVMxDzANBgNVBAoTBkFtYXpvbjEZMBcGA1UEAxMQQW1hem9uIFJv\nb3QgQ0EgMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALJ4gHHKeNXj\nca9HgFB0fW7Y14h29Jlo91ghYPl0hAEvrAIthtOgQ3pOsqTQNroBvo3bSMgHFzZM\n9O6II8c+6zf1tRn4SWiw3te5djgdYZ6k/oI2peVKVuRF4fn9tBb6dNqcmzU5L/qw\nIFAGbHrQgLKm+a/sRxmPUDgH3KKHOVj4utWp+UhnMJbulHheb4mjUcAwhmahRWa6\nVOujw5H5SNz/0egwLX0tdHA114gk957EWW67c4cX8jJGKLhD+rcdqsq08p8kDi1L\n93FcXmn/6pUCyziKrlA4b9v7LWIbxcceVOF34GfID5yHI9Y/QCB/IIDEgEw+OyQm\njgSubJrIqg0CAwEAAaOCATEwggEtMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/\nBAQDAgGGMB0GA1UdDgQWBBSEGMyFNOy8DJSULghZnMeyEE4KCDAfBgNVHSMEGDAW\ngBScXwDfqgHXMCs4iKK4bUqc8hGRgzB4BggrBgEFBQcBAQRsMGowLgYIKwYBBQUH\nMAGGImh0dHA6Ly9vY3NwLnJvb3RnMi5hbWF6b250cnVzdC5jb20wOAYIKwYBBQUH\nMAKGLGh0dHA6Ly9jcnQucm9vdGcyLmFtYXpvbnRydXN0LmNvbS9yb290ZzIuY2Vy\nMD0GA1UdHwQ2MDQwMqAwoC6GLGh0dHA6Ly9jcmwucm9vdGcyLmFtYXpvbnRydXN0\nLmNvbS9yb290ZzIuY3JsMBEGA1UdIAQKMAgwBgYEVR0gADANBgkqhkiG9w0BAQsF\nAAOCAQEAYjdCXLwQtT6LLOkMm2xF4gcAevnFWAu5CIw+7bMlPLVvUOTNNWqnkzSW\nMiGpSESrnO09tKpzbeR/FoCJbM8oAxiDR3mjEH4wW6w7sGDgd9QIpuEdfF7Au/ma\neyKdpwAJfqxGF4PcnCZXmTA5YpaP7dreqsXMGz7KQ2hsVxa81Q4gLv7/wmpdLqBK\nbRRYh5TmOTFffHPLkIhqhBGWJ6bt2YFGpn6jcgAKUj6DiAdjd4lpFw85hdKrCEVN\n0FE6/V1dN2RMfjCyVSRCnTawXZwXgWHxyvkQAiSr6w10kY17RSlQOYiypok1JR4U\nakcjMS9cmvqtmg5iUaQqqcT5NJ0hGA==\n-----END CERTIFICATE-----\n",
+                "is_ca": true,
+                "issuer": "CN=Starfield Services Root Certificate Authority - G2,O=Starfield Technologies\\, Inc.,L=Scottsdale,ST=Arizona,C=US",
+                "max_path_length": -1,
+                "not_after": "2037-12-31T01:00:00Z",
+                "not_before": "2015-05-25T12:00:00Z",
+                "public_key_algorithm": "RSA",
+                "serial_number": "144918191876577076464031512351042010504348870",
+                "sha1_fingerprint": "06b25927c42a721631c1efd9431e648fa62e1e39",
+                "signature_algorithm": "SHA256-RSA",
+                "subject": "CN=Amazon Root CA 1,O=Amazon,C=US",
+                "version": 3
+              },
+              {
+                "cert_pem": "-----BEGIN CERTIFICATE-----\nMIIEXjCCA0agAwIBAgITB3MSOAudZoijOx7Zv5zNpo4ODzANBgkqhkiG9w0BAQsF\nADA5MQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRkwFwYDVQQDExBBbWF6\nb24gUm9vdCBDQSAxMB4XDTIyMDgyMzIyMjEyOFoXDTMwMDgyMzIyMjEyOFowPDEL\nMAkGA1UEBhMCVVMxDzANBgNVBAoTBkFtYXpvbjEcMBoGA1UEAxMTQW1hem9uIFJT\nQSAyMDQ4IE0wMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOtxLKnL\nH4gokjIwr4pXD3i3NyWVVYesZ1yX0yLI2qIUZ2t88Gfa4gMqs1YSXca1R/lnCKeT\nepWSGA+0+fkQNpp/L4C2T7oTTsddUx7g3ZYzByDTlrwS5HRQQqEFE3O1T5tEJP4t\nf+28IoXsNiEzl3UGzicYgtzj2cWCB41eJgEmJmcf2T8TzzK6a614ZPyq/w4CPAff\nnAV4coz96nW3AyiE2uhuB4zQUIXvgVSycW7sbWLvj5TDXunEpNCRwC4kkZjK7rol\njtT2cbb7W2s4Bkg3R42G3PLqBvt2N32e/0JOTViCk8/iccJ4sXqrS1uUN4iB5Nmv\nJK74csVl+0u0UecCAwEAAaOCAVowggFWMBIGA1UdEwEB/wQIMAYBAf8CAQAwDgYD\nVR0PAQH/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAdBgNV\nHQ4EFgQUgbgOY4qJEhjl+js7UJWf5uWQE4UwHwYDVR0jBBgwFoAUhBjMhTTsvAyU\nlC4IWZzHshBOCggwewYIKwYBBQUHAQEEbzBtMC8GCCsGAQUFBzABhiNodHRwOi8v\nb2NzcC5yb290Y2ExLmFtYXpvbnRydXN0LmNvbTA6BggrBgEFBQcwAoYuaHR0cDov\nL2NydC5yb290Y2ExLmFtYXpvbnRydXN0LmNvbS9yb290Y2ExLmNlcjA/BgNVHR8E\nODA2MDSgMqAwhi5odHRwOi8vY3JsLnJvb3RjYTEuYW1hem9udHJ1c3QuY29tL3Jv\nb3RjYTEuY3JsMBMGA1UdIAQMMAowCAYGZ4EMAQIBMA0GCSqGSIb3DQEBCwUAA4IB\nAQCtAN4CBSMuBjJitGuxlBbkEUDeK/pZwTXv4KqPK0G50fOHOQAd8j21p0cMBgbG\nkfMHVwLU7b0XwZCav0h1ogdPMN1KakK1DT0VwA/+hFvGPJnMV1Kx2G4S1ZaSk0uU\n5QfoiYIIano01J5k4T2HapKQmmOhS/iPtuo00wW+IMLeBuKMn3OLn005hcrOGTad\nhcmeyfhQP7Z+iKHvyoQGi1C0ClymHETx/chhQGDyYSWqB/THwnN15AwLQo0E5V9E\nSJlbe4mBlqeInUsNYugExNf+tOiybcrswBy8OFsd34XOW3rjSUtsuafd9AWySa3h\nxRRrwszrzX/WWGm6wyB+f7C4\n-----END CERTIFICATE-----\n",
+                "is_ca": true,
+                "issuer": "CN=Amazon Root CA 1,O=Amazon,C=US",
+                "max_path_length": 0,
+                "not_after": "2030-08-23T22:21:28Z",
+                "not_before": "2022-08-23T22:21:28Z",
+                "public_key_algorithm": "RSA",
+                "serial_number": "166129328851546858514271303855646110030630415",
+                "sha1_fingerprint": "2ad974a775f73cbdbbd8f5ac3a49255fa8fb1f8c",
+                "signature_algorithm": "SHA256-RSA",
+                "subject": "CN=Amazon RSA 2048 M01,O=Amazon,C=US",
+                "version": 3
+              },
+              {
+                "cert_pem": "-----BEGIN CERTIFICATE-----\nMIIF3TCCBMWgAwIBAgIQC4PYfnn7viYTJoWfANxTuTANBgkqhkiG9w0BAQsFADA8\nMQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRwwGgYDVQQDExNBbWF6b24g\nUlNBIDIwNDggTTAxMB4XDTI2MDEyNzAwMDAwMFoXDTI3MDIyNTIzNTk1OVowKTEn\nMCUGA1UEAwweKi5la3MuYXAtc291dGgtMS5hbWF6b25hd3MuY29tMIIBIjANBgkq\nhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhv5NQzOW57AibZtdURJXq/91G3oMa70K\no7Xrhq4XAD0nG6OiN/NImJ3lFP7uxWWSSnN5hAc9xcuDc/77ne9IjfxgNToosF8C\nUvHNnQ13y7pEqvYg0dosz6tM134cZkwyImGP8OeLaKV4FsHYVxIXEnQdI0bC3Qiv\nyjv5mcJuAaKpm+n3/m/qBUiyL4s82W4+LGHI1hCUum3iIGA2ip6Hp7BwVGMoKecs\njqAYiXKjdfBmN6FJIQ+RIxbEgPT+o1Kidfik/1PFH2im76CefXY0HXBoWDQmWZn5\nZ6WrQ3Fu+qI0R/HgHtEb1fa7KqcsWs07rOfnrJZaB5FQVeydUV1ElwIDAQABo4IC\n7DCCAugwHwYDVR0jBBgwFoAUgbgOY4qJEhjl+js7UJWf5uWQE4UwHQYDVR0OBBYE\nFFbaD6c98vgjLUjXSFaf8SPmFLeAMCkGA1UdEQQiMCCCHiouZWtzLmFwLXNvdXRo\nLTEuYW1hem9uYXdzLmNvbTATBgNVHSAEDDAKMAgGBmeBDAECATAOBgNVHQ8BAf8E\nBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwOwYDVR0fBDQwMjAwoC6gLIYqaHR0\ncDovL2NybC5yMm0wMS5hbWF6b250cnVzdC5jb20vcjJtMDEuY3JsMHUGCCsGAQUF\nBwEBBGkwZzAtBggrBgEFBQcwAYYhaHR0cDovL29jc3AucjJtMDEuYW1hem9udHJ1\nc3QuY29tMDYGCCsGAQUFBzAChipodHRwOi8vY3J0LnIybTAxLmFtYXpvbnRydXN0\nLmNvbS9yMm0wMS5jZXIwDAYDVR0TAQH/BAIwADCCAX0GCisGAQQB1nkCBAIEggFt\nBIIBaQFnAHYATGPcmOWcHauI9h6KPd6uj6tEozd7X5uUw/uhnPzBviYAAAGb/M85\ngwAABAMARzBFAiEA1YKhCfg9RgldH6IFIowiYiRs1Addi8oMUCIQ2pBXG/QCIDQs\nuHxMlYyoJ8LFzGLKuDLeaCFypNISBk2B4qJMapD1AHUAHJ9oLOn68EVpUPgbloqH\n3dsyENhM5siy44JSSsTPWZ8AAAGb/M85mQAABAMARjBEAiB0syZumJQByPaA1tqz\nfyZqtCV1iIwQefAGuEHFV6wxcwIgRcOL6BTii+Y/9u/ZGQBOlfDxftwa/4Widc2t\nWDuVsUoAdgBgTJqven93XwHUBvySDciZ6wscffjJUhv6+hd3O5eLyQAAAZv8zzpe\nAAAEAwBHMEUCIHgL0hy9AdNqPvNbTd8wfUUWVAcVRLgTZNCPKX+9nBuaAiEAulm6\ngP+wgjr9cyefY98pksM9Yy19ZoCHaQXTZkQmkv4wDQYJKoZIhvcNAQELBQADggEB\nAKXbVJ9K5wYRv93nW9febVCXN4txei0vG1tsp+1RRtBlKb0n1QoxfY/QHY1aS+KS\n4iZWVqd/45PJBO6ETnGA26dBOzQEmIQaHXlzHmf7ChoQ/IAzGnv1b7zSz1WJ+dHI\nQCRcxud0g7zOsJLZ1E4w3tAIHCWnjBHheAPCPhoKm7ou2Uyg+lAb4R+mjMoAt+tI\nfIs1dL5XZzShQxP92SykI0R2CAuLpluRK+9xTm03tqu9zaVENWTwlLe6ZFXl/G5a\nCA8DoejDqXx5rhT/W3fQ/0wtLULz5253CN20wlNMY9M7rS0UABfxMnTj8tr21ikl\nXqThadIz4H6dg8PDUGq6xbg=\n-----END CERTIFICATE-----\n",
+                "is_ca": false,
+                "issuer": "CN=Amazon RSA 2048 M01,O=Amazon,C=US",
+                "max_path_length": -1,
+                "not_after": "2027-02-25T23:59:59Z",
+                "not_before": "2026-01-27T00:00:00Z",
+                "public_key_algorithm": "RSA",
+                "serial_number": "15306089863077027100491464600926835641",
+                "sha1_fingerprint": "9540116bb56e8ea19f0b4a08e845a17f827c131e",
+                "signature_algorithm": "SHA256-RSA",
+                "subject": "CN=*.eks.ap-south-1.amazonaws.com",
+                "version": 3
+              }
+            ],
+            "content": null,
+            "id": "1e3a331631939a1ae4a625cd4244a4963dabbfa2",
+            "url": "https://oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776",
+            "verify_chain": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "managed",
+      "type": "aws_iam_openid_connect_provider",
+      "name": "eks",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776",
+            "client_id_list": [
+              "sts.amazonaws.com"
+            ],
+            "id": "arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776",
+            "tags": null,
+            "tags_all": {},
+            "thumbprint_list": [
+              "06b25927c42a721631c1efd9431e648fa62e1e39"
+            ],
+            "url": "oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "arn": "arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "managed",
+      "type": "aws_iam_policy",
+      "name": "alb_controller",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy",
+            "attachment_count": 0,
+            "delay_after_policy_creation_in_ms": null,
+            "description": "IAM policy for the AWS Load Balancer Controller",
+            "id": "arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy",
+            "name": "GameVaultAWSLoadBalancerControllerPolicy",
+            "name_prefix": "",
+            "path": "/",
+            "policy": "{\"Statement\":[{\"Action\":[\"iam:CreateServiceLinkedRole\"],\"Condition\":{\"StringEquals\":{\"iam:AWSServiceName\":\"elasticloadbalancing.amazonaws.com\"}},\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"ec2:DescribeAccountAttributes\",\"ec2:DescribeAddresses\",\"ec2:DescribeAvailabilityZones\",\"ec2:DescribeInternetGateways\",\"ec2:DescribeVpcs\",\"ec2:DescribeVpcPeeringConnections\",\"ec2:DescribeSubnets\",\"ec2:DescribeSecurityGroups\",\"ec2:DescribeInstances\",\"ec2:DescribeNetworkInterfaces\",\"ec2:DescribeTags\",\"ec2:GetCoipPoolUsage\",\"ec2:DescribeCoipPools\",\"ec2:GetSecurityGroupsForVpc\",\"ec2:DescribeIpamPools\",\"ec2:DescribeRouteTables\",\"elasticloadbalancing:DescribeLoadBalancers\",\"elasticloadbalancing:DescribeLoadBalancerAttributes\",\"elasticloadbalancing:DescribeListeners\",\"elasticloadbalancing:DescribeListenerCertificates\",\"elasticloadbalancing:DescribeSSLPolicies\",\"elasticloadbalancing:DescribeRules\",\"elasticloadbalancing:DescribeTargetGroups\",\"elasticloadbalancing:DescribeTargetGroupAttributes\",\"elasticloadbalancing:DescribeTargetHealth\",\"elasticloadbalancing:DescribeTags\",\"elasticloadbalancing:DescribeTrustStores\",\"elasticloadbalancing:DescribeListenerAttributes\",\"elasticloadbalancing:DescribeCapacityReservation\"],\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"cognito-idp:DescribeUserPoolClient\",\"acm:ListCertificates\",\"acm:DescribeCertificate\",\"iam:ListServerCertificates\",\"iam:GetServerCertificate\",\"waf-regional:GetWebACL\",\"waf-regional:GetWebACLForResource\",\"waf-regional:AssociateWebACL\",\"waf-regional:DisassociateWebACL\",\"wafv2:GetWebACL\",\"wafv2:GetWebACLForResource\",\"wafv2:AssociateWebACL\",\"wafv2:DisassociateWebACL\",\"shield:GetSubscriptionState\",\"shield:DescribeProtection\",\"shield:CreateProtection\",\"shield:DeleteProtection\"],\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"ec2:AuthorizeSecurityGroupIngress\",\"ec2:RevokeSecurityGroupIngress\"],\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"ec2:CreateSecurityGroup\"],\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"ec2:CreateTags\"],\"Condition\":{\"Null\":{\"aws:RequestTag/elbv2.k8s.aws/cluster\":\"false\"},\"StringEquals\":{\"ec2:CreateAction\":\"CreateSecurityGroup\"}},\"Effect\":\"Allow\",\"Resource\":\"arn:aws:ec2:*:*:security-group/*\"},{\"Action\":[\"ec2:CreateTags\",\"ec2:DeleteTags\"],\"Condition\":{\"Null\":{\"aws:RequestTag/elbv2.k8s.aws/cluster\":\"true\",\"aws:ResourceTag/elbv2.k8s.aws/cluster\":\"false\"}},\"Effect\":\"Allow\",\"Resource\":\"arn:aws:ec2:*:*:security-group/*\"},{\"Action\":[\"ec2:AuthorizeSecurityGroupIngress\",\"ec2:RevokeSecurityGroupIngress\",\"ec2:DeleteSecurityGroup\"],\"Condition\":{\"Null\":{\"aws:ResourceTag/elbv2.k8s.aws/cluster\":\"false\"}},\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"elasticloadbalancing:CreateLoadBalancer\",\"elasticloadbalancing:CreateTargetGroup\"],\"Condition\":{\"Null\":{\"aws:RequestTag/elbv2.k8s.aws/cluster\":\"false\"}},\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"elasticloadbalancing:CreateListener\",\"elasticloadbalancing:DeleteListener\",\"elasticloadbalancing:CreateRule\",\"elasticloadbalancing:DeleteRule\"],\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"elasticloadbalancing:AddTags\",\"elasticloadbalancing:RemoveTags\"],\"Condition\":{\"Null\":{\"aws:RequestTag/elbv2.k8s.aws/cluster\":\"true\",\"aws:ResourceTag/elbv2.k8s.aws/cluster\":\"false\"}},\"Effect\":\"Allow\",\"Resource\":[\"arn:aws:elasticloadbalancing:*:*:targetgroup/*/*\",\"arn:aws:elasticloadbalancing:*:*:loadbalancer/net/*/*\",\"arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*\"]},{\"Action\":[\"elasticloadbalancing:AddTags\",\"elasticloadbalancing:RemoveTags\"],\"Effect\":\"Allow\",\"Resource\":[\"arn:aws:elasticloadbalancing:*:*:listener/net/*/*/*\",\"arn:aws:elasticloadbalancing:*:*:listener/app/*/*/*\",\"arn:aws:elasticloadbalancing:*:*:listener-rule/net/*/*/*\",\"arn:aws:elasticloadbalancing:*:*:listener-rule/app/*/*/*\"]},{\"Action\":[\"elasticloadbalancing:ModifyLoadBalancerAttributes\",\"elasticloadbalancing:SetIpAddressType\",\"elasticloadbalancing:SetSecurityGroups\",\"elasticloadbalancing:SetSubnets\",\"elasticloadbalancing:DeleteLoadBalancer\",\"elasticloadbalancing:ModifyTargetGroup\",\"elasticloadbalancing:ModifyTargetGroupAttributes\",\"elasticloadbalancing:DeleteTargetGroup\",\"elasticloadbalancing:ModifyListenerAttributes\",\"elasticloadbalancing:ModifyCapacityReservation\",\"elasticloadbalancing:ModifyIpPools\"],\"Condition\":{\"Null\":{\"aws:ResourceTag/elbv2.k8s.aws/cluster\":\"false\"}},\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Action\":[\"elasticloadbalancing:AddTags\"],\"Condition\":{\"Null\":{\"aws:RequestTag/elbv2.k8s.aws/cluster\":\"false\"},\"StringEquals\":{\"elasticloadbalancing:CreateAction\":[\"CreateTargetGroup\",\"CreateLoadBalancer\"]}},\"Effect\":\"Allow\",\"Resource\":[\"arn:aws:elasticloadbalancing:*:*:targetgroup/*/*\",\"arn:aws:elasticloadbalancing:*:*:loadbalancer/net/*/*\",\"arn:aws:elasticloadbalancing:*:*:loadbalancer/app/*/*\"]},{\"Action\":[\"elasticloadbalancing:RegisterTargets\",\"elasticloadbalancing:DeregisterTargets\"],\"Effect\":\"Allow\",\"Resource\":\"arn:aws:elasticloadbalancing:*:*:targetgroup/*/*\"},{\"Action\":[\"elasticloadbalancing:SetWebAcl\",\"elasticloadbalancing:ModifyListener\",\"elasticloadbalancing:AddListenerCertificates\",\"elasticloadbalancing:RemoveListenerCertificates\",\"elasticloadbalancing:ModifyRule\",\"elasticloadbalancing:SetRulePriorities\"],\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"2012-10-17\"}",
+            "policy_id": "ANPAQWQWAML4MM2L6O6AR",
+            "tags": {
+              "Environment": "dev",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Project": "GameVault"
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "arn": "arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy"
+          },
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "alb_controller",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::048364544760:role/gamevault-aws-load-balancer-controller",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRoleWithWebIdentity\",\"Condition\":{\"StringEquals\":{\"oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:aud\":\"sts.amazonaws.com\",\"oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776:sub\":\"system:serviceaccount:kube-system:aws-load-balancer-controller\"}},\"Effect\":\"Allow\",\"Principal\":{\"Federated\":\"arn:aws:iam::048364544760:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2026-10-12T08:55:31Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "gamevault-aws-load-balancer-controller",
+            "inline_policy": [],
+            "managed_policy_arns": [],
+            "max_session_duration": 3600,
+            "name": "gamevault-aws-load-balancer-controller",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {
+              "Environment": "dev",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Project": "GameVault"
+            },
+            "unique_id": "AROAQWQWAML4AMLVY6LMJ"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-aws-load-balancer-controller"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "alb_controller",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-aws-load-balancer-controller/arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy",
+            "policy_arn": "arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy",
+            "role": "gamevault-aws-load-balancer-controller"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "policy_arn": "arn:aws:iam::048364544760:policy/GameVaultAWSLoadBalancerControllerPolicy",
+            "role": "gamevault-aws-load-balancer-controller"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "managed",
+      "type": "helm_release",
+      "name": "alb_controller",
+      "provider": "provider[\"registry.terraform.io/hashicorp/helm\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "atomic": false,
+            "chart": "aws-load-balancer-controller",
+            "cleanup_on_fail": false,
+            "create_namespace": true,
+            "dependency_update": false,
+            "description": null,
+            "devel": null,
+            "disable_crd_hooks": false,
+            "disable_openapi_validation": false,
+            "disable_webhooks": false,
+            "force_update": false,
+            "id": "aws-load-balancer-controller",
+            "keyring": null,
+            "lint": false,
+            "manifest": null,
+            "max_history": 0,
+            "metadata": [
+              {
+                "app_version": "v2.14.0",
+                "chart": "aws-load-balancer-controller",
+                "first_deployed": 1791795347,
+                "last_deployed": 1791795347,
+                "name": "aws-load-balancer-controller",
+                "namespace": "kube-system",
+                "notes": "AWS Load Balancer controller installed!\n",
+                "revision": 1,
+                "values": "{\"clusterName\":\"gamevault-eks\",\"region\":\"ap-south-1\",\"serviceAccount\":{\"create\":false,\"name\":\"aws-load-balancer-controller\"},\"vpcId\":\"vpc-00b6701d213f4fe87\"}",
+                "version": "1.14.0"
+              }
+            ],
+            "name": "aws-load-balancer-controller",
+            "namespace": "kube-system",
+            "pass_credentials": false,
+            "postrender": [],
+            "recreate_pods": false,
+            "render_subchart_notes": true,
+            "replace": false,
+            "repository": "https://aws.github.io/eks-charts",
+            "repository_ca_file": null,
+            "repository_cert_file": null,
+            "repository_key_file": null,
+            "repository_password": null,
+            "repository_username": null,
+            "reset_values": false,
+            "reuse_values": false,
+            "set": [
+              {
+                "name": "clusterName",
+                "type": "",
+                "value": "gamevault-eks"
+              },
+              {
+                "name": "region",
+                "type": "",
+                "value": "ap-south-1"
+              },
+              {
+                "name": "serviceAccount.create",
+                "type": "",
+                "value": "false"
+              },
+              {
+                "name": "serviceAccount.name",
+                "type": "",
+                "value": "aws-load-balancer-controller"
+              },
+              {
+                "name": "vpcId",
+                "type": "",
+                "value": "vpc-00b6701d213f4fe87"
+              }
+            ],
+            "set_list": [],
+            "set_sensitive": [],
+            "skip_crds": false,
+            "status": "deployed",
+            "timeout": 300,
+            "upgrade_install": null,
+            "values": null,
+            "verify": false,
+            "version": "1.14.0",
+            "wait": true,
+            "wait_for_jobs": false
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "repository_password"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.alb_controller",
+      "mode": "managed",
+      "type": "kubernetes_service_account",
+      "name": "alb_controller",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "automount_service_account_token": true,
+            "default_secret_name": "",
+            "id": "kube-system/aws-load-balancer-controller",
+            "image_pull_secret": [],
+            "metadata": [
+              {
+                "annotations": {
+                  "eks.amazonaws.com/role-arn": "arn:aws:iam::048364544760:role/gamevault-aws-load-balancer-controller"
+                },
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "aws-load-balancer-controller",
+                "namespace": "kube-system",
+                "resource_version": "2070",
+                "uid": "c5c9d3a3-0a13-4dd6-b229-12b7526515e0"
+              }
+            ],
+            "secret": [],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "ServiceAccount",
+            "name": "aws-load-balancer-controller",
+            "namespace": "kube-system"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.ecr",
+      "mode": "managed",
+      "type": "aws_ecr_lifecycle_policy",
+      "name": "api",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-api",
+            "policy": "{\"rules\":[{\"action\":{\"type\":\"expire\"},\"description\":\"Keep only the latest 10 untagged images\",\"rulePriority\":1,\"selection\":{\"countNumber\":10,\"countType\":\"imageCountMoreThan\",\"tagStatus\":\"untagged\"}}]}",
+            "region": "ap-south-1",
+            "registry_id": "048364544760",
+            "repository": "gamevault-api"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "region": "ap-south-1",
+            "repository": "gamevault-api"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.ecr.aws_ecr_repository.api"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.ecr",
+      "mode": "managed",
+      "type": "aws_ecr_lifecycle_policy",
+      "name": "worker",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-worker",
+            "policy": "{\"rules\":[{\"action\":{\"type\":\"expire\"},\"description\":\"Keep only the latest 10 untagged images\",\"rulePriority\":1,\"selection\":{\"countNumber\":10,\"countType\":\"imageCountMoreThan\",\"tagStatus\":\"untagged\"}}]}",
+            "region": "ap-south-1",
+            "registry_id": "048364544760",
+            "repository": "gamevault-worker"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "region": "ap-south-1",
+            "repository": "gamevault-worker"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.ecr.aws_ecr_repository.worker"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.ecr",
+      "mode": "managed",
+      "type": "aws_ecr_repository",
+      "name": "api",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ecr:ap-south-1:048364544760:repository/gamevault-api",
+            "encryption_configuration": [
+              {
+                "encryption_type": "AES256",
+                "kms_key": ""
+              }
+            ],
+            "force_delete": null,
+            "id": "gamevault-api",
+            "image_scanning_configuration": [
+              {
+                "scan_on_push": true
+              }
+            ],
+            "image_tag_mutability": "MUTABLE",
+            "image_tag_mutability_exclusion_filter": [],
+            "name": "gamevault-api",
+            "region": "ap-south-1",
+            "registry_id": "048364544760",
+            "repository_url": "048364544760.dkr.ecr.ap-south-1.amazonaws.com/gamevault-api",
+            "tags": {
+              "Component": "API",
+              "Environment": "dev",
+              "Name": "gamevault-api",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Component": "API",
+              "Environment": "dev",
+              "Name": "gamevault-api",
+              "Project": "GameVault"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-api",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxMjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "module": "module.ecr",
+      "mode": "managed",
+      "type": "aws_ecr_repository",
+      "name": "worker",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ecr:ap-south-1:048364544760:repository/gamevault-worker",
+            "encryption_configuration": [
+              {
+                "encryption_type": "AES256",
+                "kms_key": ""
+              }
+            ],
+            "force_delete": null,
+            "id": "gamevault-worker",
+            "image_scanning_configuration": [
+              {
+                "scan_on_push": true
+              }
+            ],
+            "image_tag_mutability": "MUTABLE",
+            "image_tag_mutability_exclusion_filter": [],
+            "name": "gamevault-worker",
+            "region": "ap-south-1",
+            "registry_id": "048364544760",
+            "repository_url": "048364544760.dkr.ecr.ap-south-1.amazonaws.com/gamevault-worker",
+            "tags": {
+              "Component": "Worker",
+              "Environment": "dev",
+              "Name": "gamevault-worker",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Component": "Worker",
+              "Environment": "dev",
+              "Name": "gamevault-worker",
+              "Project": "GameVault"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-worker",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxMjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "ebs_csi_assume_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "819195744",
+            "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"sts:TagSession\",\n        \"sts:AssumeRole\"\n      ],\n      \"Principal\": {\n        \"Service\": \"pods.eks.amazonaws.com\"\n      }\n    }\n  ]\n}",
+            "minified_json": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":[\"sts:TagSession\",\"sts:AssumeRole\"],\"Principal\":{\"Service\":\"pods.eks.amazonaws.com\"}}]}",
+            "override_json": null,
+            "override_policy_documents": null,
+            "policy_id": null,
+            "source_json": null,
+            "source_policy_documents": null,
+            "statement": [
+              {
+                "actions": [
+                  "sts:AssumeRole",
+                  "sts:TagSession"
+                ],
+                "condition": [],
+                "effect": "Allow",
+                "not_actions": [],
+                "not_principals": [],
+                "not_resources": [],
+                "principals": [
+                  {
+                    "identifiers": [
+                      "pods.eks.amazonaws.com"
+                    ],
+                    "type": "Service"
+                  }
+                ],
+                "resources": [],
+                "sid": ""
+              }
+            ],
+            "version": "2012-10-17"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_eks_addon",
+      "name": "ebs_csi_driver",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "addon_name": "aws-ebs-csi-driver",
+            "addon_version": "v1.66.0-eksbuild.1",
+            "arn": "arn:aws:eks:ap-south-1:048364544760:addon/gamevault-eks/aws-ebs-csi-driver/4ed097aa-e6f8-9caf-023c-b0a2651e209a",
+            "cluster_name": "gamevault-eks",
+            "configuration_values": "",
+            "created_at": "2026-10-12T08:58:35Z",
+            "id": "gamevault-eks:aws-ebs-csi-driver",
+            "modified_at": "2026-10-12T08:59:16Z",
+            "namespace_config": [
+              {
+                "namespace": "kube-system"
+              }
+            ],
+            "pod_identity_association": [
+              {
+                "role_arn": "arn:aws:iam::048364544760:role/gamevault-ebs-csi-driver",
+                "service_account": "ebs-csi-controller-sa"
+              }
+            ],
+            "preserve": null,
+            "region": "ap-south-1",
+            "resolve_conflicts_on_create": null,
+            "resolve_conflicts_on_update": null,
+            "service_account_role_arn": "",
+            "tags": null,
+            "tags_all": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "addon_name": "aws-ebs-csi-driver",
+            "cluster_name": "gamevault-eks",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjI0MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_eks_addon",
+      "name": "pod_identity_agent",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "addon_name": "eks-pod-identity-agent",
+            "addon_version": "v1.3.10-eksbuild.3",
+            "arn": "arn:aws:eks:ap-south-1:048364544760:addon/gamevault-eks/eks-pod-identity-agent/48d097aa-c51a-84ab-4613-b26d84747bc6",
+            "cluster_name": "gamevault-eks",
+            "configuration_values": "",
+            "created_at": "2026-10-12T08:58:17Z",
+            "id": "gamevault-eks:eks-pod-identity-agent",
+            "modified_at": "2026-10-12T08:58:33Z",
+            "namespace_config": [
+              {
+                "namespace": "kube-system"
+              }
+            ],
+            "pod_identity_association": [],
+            "preserve": null,
+            "region": "ap-south-1",
+            "resolve_conflicts_on_create": null,
+            "resolve_conflicts_on_update": null,
+            "service_account_role_arn": "",
+            "tags": null,
+            "tags_all": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "addon_name": "eks-pod-identity-agent",
+            "cluster_name": "gamevault-eks",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjI0MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_eks_cluster",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "access_config": [
+              {
+                "authentication_mode": "CONFIG_MAP",
+                "bootstrap_cluster_creator_admin_permissions": true
+              }
+            ],
+            "arn": "arn:aws:eks:ap-south-1:048364544760:cluster/gamevault-eks",
+            "bootstrap_self_managed_addons": true,
+            "certificate_authority": [
+              {
+                "data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURNakNDQWhxZ0F3SUJBZ0lSQVBMbUhkdiswRDdjVVV1Uld4a0hrdll3RFFZSktvWklodmNOQVFFTEJRQXcKSnpFUU1BNEdBMVVFQ2hNSFFWZFRJRVZMVXpFVE1CRUdBMVVFQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TmpFdwpNVEl3T0RNNE1EUmFGdzB6TVRFd01URXdPRE00TURSYU1DY3hFREFPQmdOVkJBb1RCMEZYVXlCRlMxTXhFekFSCkJnTlZCQU1UQ210MVltVnlibVYwWlhNd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUIKQVFDNWxyeXlPUVh6N3pTNHBGTU9vYnBXZUdTNE5VSVRUdlB5NEp0VWhwK2htSU1WTHFUd09udGp2czR0SGpoWgpVcWtKZGRkN2hJcjIwS2RGOEtFNmU4OXREV2xaWkVmUTdLejBnaTlKUUFjWm40RVYxTHU0cGFEL295MDdPYmhpClgzSlRPcm1hMnUrMVNwUUtzWE5YZVFTY3d5WjJ2QWJqRnNMUHNFTk5DRkY5aDdoSEJjMEx1ZS9VbW1zanRuM0MKN2lQUmh0Z1p4KzVlZ2s1VlhnaXduNGxGbnBBYjJvc2NtaS9vd0V1QTloVm5Oem42bUpLWWZwcitNZ2NycXo2MQpnQ1lWbVhKUnp4Z2tvZWYyNzV1R2hJSnkyT3JLR1kyM3dlV3VBcGxNeEY4bko5UEFKR3ZwSW51MUJ4N0pDeXV1CkdYejh1RnZUNzZJdlpoOGM3SERTTUU3cEFnTUJBQUdqV1RCWE1BNEdBMVVkRHdFQi93UUVBd0lDcERBUEJnTlYKSFJNQkFmOEVCVEFEQVFIL01CMEdBMVVkRGdRV0JCUTFpbHhEQmtZWmhyWVdwa0MrWnBNVzMyMlcyVEFWQmdOVgpIUkVFRGpBTWdncHJkV0psY201bGRHVnpNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUJBUUNQUDhZUnZ2bVEvQVh5CmRDTUNSKzRYS2JGdVFzbFdBRXBBeGZhYzFoVitNZENpUFBoTDMveWkwSDU1VlVpTlNJQklSak85NGx4a3JZNEcKUjFPZVBqd0VMNFBlbzlPYmYrWnUwYitkWXNqbEZpbU5Db1orRjNwQzhPbVBrYWgwdVY2TFRvb28yekZTWmhPTQpGbFBYek9PcnY2ekRCc2ROWGtwMDltN0VtZDZram0zK3JUZ2NSamoxb2JNeDBrL1VPY1hOT2QxK3FZbFl2SnJRCmNTWU1KcElvU05SM0VXclNDdmJ4anU2RjhtNHBkZ3pyRUkvK0FhMDkzWm1BTXJYbmxZY0huZkFPRFNrZzd0MHUKb2JLMjFwTUNDeWMrUEt5TnpiVGoveU9JbFVubWttMzdaQ05rVEcyNzd6a25PSHBGbG45bm55aFVRNTR2TmNBOQowL2J1N2V4aQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+              }
+            ],
+            "cluster_id": null,
+            "compute_config": [
+              {
+                "enabled": false,
+                "node_pools": [],
+                "node_role_arn": ""
+              }
+            ],
+            "control_plane_scaling_config": [
+              {
+                "tier": "standard"
+              }
+            ],
+            "created_at": "2026-10-12T08:37:58Z",
+            "deletion_protection": false,
+            "enabled_cluster_log_types": null,
+            "encryption_config": [],
+            "endpoint": "https://62C37CB5359D894B9D6666A7839D5776.gr7.ap-south-1.eks.amazonaws.com",
+            "force_update_version": null,
+            "id": "gamevault-eks",
+            "identity": [
+              {
+                "oidc": [
+                  {
+                    "issuer": "https://oidc.eks.ap-south-1.amazonaws.com/id/62C37CB5359D894B9D6666A7839D5776"
+                  }
+                ]
+              }
+            ],
+            "kube_api_server_config": [
+              {
+                "event_ttl": "60m",
+                "service_node_port_range": [
+                  {
+                    "max_port": 32767,
+                    "min_port": 30000
+                  }
+                ]
+              }
+            ],
+            "kube_controller_manager_config": [
+              {
+                "horizontal_pod_autoscaler_controller_config": [
+                  {
+                    "horizontal_pod_autoscaler_sync_period": "15s"
+                  }
+                ],
+                "pod_gc_controller_config": [
+                  {
+                    "terminated_pod_gc_threshold": 12500
+                  }
+                ]
+              }
+            ],
+            "kube_scheduler_config": [
+              {
+                "node_resources_fit": [
+                  {
+                    "scoring_strategy": [
+                      {
+                        "resource": [
+                          {
+                            "name": "cpu",
+                            "weight": 1
+                          },
+                          {
+                            "name": "memory",
+                            "weight": 1
+                          }
+                        ],
+                        "type": "LeastAllocated"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "kubernetes_network_config": [
+              {
+                "elastic_load_balancing": [
+                  {
+                    "enabled": false
+                  }
+                ],
+                "ip_family": "ipv4",
+                "service_ipv4_cidr": "172.20.0.0/16",
+                "service_ipv6_cidr": ""
+              }
+            ],
+            "name": "gamevault-eks",
+            "outpost_config": [],
+            "platform_version": "eks.24",
+            "region": "ap-south-1",
+            "remote_network_config": [],
+            "role_arn": "arn:aws:iam::048364544760:role/gamevault-eks-cluster-role",
+            "status": "ACTIVE",
+            "storage_config": [
+              {
+                "block_storage": [
+                  {
+                    "enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-eks",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-eks",
+              "Project": "GameVault"
+            },
+            "timeouts": null,
+            "upgrade_policy": [
+              {
+                "support_type": "EXTENDED"
+              }
+            ],
+            "version": "1.35",
+            "vpc_config": [
+              {
+                "cluster_security_group_id": "sg-04f20496683e299f0",
+                "control_plane_egress_mode": "AWS_MANAGED",
+                "endpoint_private_access": false,
+                "endpoint_public_access": true,
+                "public_access_cidrs": [
+                  "0.0.0.0/0"
+                ],
+                "security_group_ids": null,
+                "subnet_ids": [
+                  "subnet-043eb3f0a2e294f23",
+                  "subnet-050c5bcb2a9a4234b"
+                ],
+                "vpc_id": "vpc-00b6701d213f4fe87"
+              }
+            ],
+            "zonal_shift_config": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-eks",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
+          "dependencies": [
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_eks_node_group",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "ami_type": "AL2023_x86_64_STANDARD",
+            "arn": "arn:aws:eks:ap-south-1:048364544760:nodegroup/gamevault-eks/gamevault-eks-nodes/ded097a9-7a7f-553b-3bfb-1dffe4487463",
+            "capacity_type": "ON_DEMAND",
+            "cluster_name": "gamevault-eks",
+            "disk_size": 20,
+            "force_update_version": null,
+            "id": "gamevault-eks:gamevault-eks-nodes",
+            "instance_types": [
+              "t3.small"
+            ],
+            "labels": null,
+            "launch_template": [],
+            "node_group_name": "gamevault-eks-nodes",
+            "node_group_name_prefix": "",
+            "node_repair_config": [],
+            "node_role_arn": "arn:aws:iam::048364544760:role/gamevault-eks-node-role",
+            "region": "ap-south-1",
+            "release_version": "1.35.8-20261003",
+            "remote_access": [],
+            "resources": [
+              {
+                "autoscaling_groups": [
+                  {
+                    "name": "eks-gamevault-eks-nodes-ded097a9-7a7f-553b-3bfb-1dffe4487463"
+                  }
+                ],
+                "remote_access_security_group_id": ""
+              }
+            ],
+            "scaling_config": [
+              {
+                "desired_size": 1,
+                "max_size": 2,
+                "min_size": 1
+              }
+            ],
+            "status": "ACTIVE",
+            "subnet_ids": [
+              "subnet-043eb3f0a2e294f23",
+              "subnet-050c5bcb2a9a4234b"
+            ],
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-eks-nodes",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-eks-nodes",
+              "Project": "GameVault"
+            },
+            "taint": [],
+            "timeouts": null,
+            "update_config": [
+              {
+                "max_unavailable": 1,
+                "max_unavailable_percentage": 0,
+                "update_strategy": ""
+              }
+            ],
+            "version": "1.35",
+            "warm_pool_config": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "cluster_name": "gamevault-eks",
+            "node_group_name": "gamevault-eks-nodes",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozNjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInVwZGF0ZSI6MzYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "ebs_csi",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::048364544760:role/gamevault-ebs-csi-driver",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":[\"sts:TagSession\",\"sts:AssumeRole\"],\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"pods.eks.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2026-10-12T08:37:53Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "gamevault-ebs-csi-driver",
+            "inline_policy": [],
+            "managed_policy_arns": [],
+            "max_session_duration": 3600,
+            "name": "gamevault-ebs-csi-driver",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {
+              "Environment": "dev",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Project": "GameVault"
+            },
+            "unique_id": "AROAQWQWAML4J4NRRFIIJ"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-ebs-csi-driver"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "eks_cluster",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::048364544760:role/gamevault-eks-cluster-role",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"eks.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2026-10-12T08:37:54Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "gamevault-eks-cluster-role",
+            "inline_policy": [],
+            "managed_policy_arns": [],
+            "max_session_duration": 3600,
+            "name": "gamevault-eks-cluster-role",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-eks-cluster-role",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-eks-cluster-role",
+              "Project": "GameVault"
+            },
+            "unique_id": "AROAQWQWAML4FYJ47FV4G"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-eks-cluster-role"
+          },
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "eks_nodes",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::048364544760:role/gamevault-eks-node-role",
+            "assume_role_policy": "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"ec2.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}",
+            "create_date": "2026-10-12T08:37:53Z",
+            "description": "",
+            "force_detach_policies": false,
+            "id": "gamevault-eks-node-role",
+            "inline_policy": [],
+            "managed_policy_arns": [],
+            "max_session_duration": 3600,
+            "name": "gamevault-eks-node-role",
+            "name_prefix": "",
+            "path": "/",
+            "permissions_boundary": "",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-eks-node-role",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-eks-node-role",
+              "Project": "GameVault"
+            },
+            "unique_id": "AROAQWQWAML4KLPU6JBBJ"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "name": "gamevault-eks-node-role"
+          },
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "ebs_csi",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-ebs-csi-driver/arn:aws:iam::aws:policy/AmazonEBSCSIDriverPolicyV2",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEBSCSIDriverPolicyV2",
+            "role": "gamevault-ebs-csi-driver"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEBSCSIDriverPolicyV2",
+            "role": "gamevault-ebs-csi-driver"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_cluster_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-eks-cluster-role/arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+            "role": "gamevault-eks-cluster-role"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy",
+            "role": "gamevault-eks-cluster-role"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.eks.aws_iam_role.eks_cluster"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_cni_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-eks-node-role/arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+            "role": "gamevault-eks-node-role"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+            "role": "gamevault-eks-node-role"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.eks.aws_iam_role.eks_nodes"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_ecr_read_only",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-eks-node-role/arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+            "role": "gamevault-eks-node-role"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+            "role": "gamevault-eks-node-role"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.eks.aws_iam_role.eks_nodes"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "aws_iam_role_policy_attachment",
+      "name": "eks_worker_node_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault-eks-node-role/arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+            "role": "gamevault-eks-node-role"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "policy_arn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+            "role": "gamevault-eks-node-role"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.eks.aws_iam_role.eks_nodes"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_config_map",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "binary_data": null,
+            "data": {
+              "REDIS_QUEUE": "gamevault_queue"
+            },
+            "id": "gamevault/gamevault-config",
+            "immutable": false,
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "gamevault-config",
+                "namespace": "gamevault",
+                "resource_version": "3080",
+                "uid": "28648675-8fd8-4640-aa39-94d6fbcce4d5"
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "ConfigMap",
+            "name": "gamevault-config",
+            "namespace": "gamevault"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_deployment",
+      "name": "api",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "status": "tainted",
+          "schema_version": 1,
+          "attributes": {
+            "id": "gamevault/gamevault-api",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app": "gamevault-api"
+                },
+                "name": "gamevault-api",
+                "namespace": "gamevault",
+                "resource_version": "",
+                "uid": ""
+              }
+            ],
+            "spec": [
+              {
+                "min_ready_seconds": 0,
+                "paused": false,
+                "progress_deadline_seconds": 600,
+                "replicas": "3",
+                "revision_history_limit": 10,
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "app": "gamevault-api"
+                    }
+                  }
+                ],
+                "strategy": [],
+                "template": [
+                  {
+                    "metadata": [
+                      {
+                        "annotations": null,
+                        "generate_name": "",
+                        "generation": 0,
+                        "labels": {
+                          "app": "gamevault-api"
+                        },
+                        "name": "",
+                        "namespace": "",
+                        "resource_version": "",
+                        "uid": ""
+                      }
+                    ],
+                    "spec": [
+                      {
+                        "active_deadline_seconds": 0,
+                        "affinity": [],
+                        "automount_service_account_token": true,
+                        "container": [
+                          {
+                            "args": null,
+                            "command": null,
+                            "env": [
+                              {
+                                "name": "REDIS_QUEUE",
+                                "value": "",
+                                "value_from": [
+                                  {
+                                    "config_map_key_ref": [
+                                      {
+                                        "key": "REDIS_QUEUE",
+                                        "name": "gamevault-config",
+                                        "optional": false
+                                      }
+                                    ],
+                                    "field_ref": [],
+                                    "resource_field_ref": [],
+                                    "secret_key_ref": []
+                                  }
+                                ]
+                              }
+                            ],
+                            "env_from": [],
+                            "image": "048364544760.dkr.ecr.ap-south-1.amazonaws.com/gamevault-api:latest",
+                            "image_pull_policy": "",
+                            "lifecycle": [],
+                            "liveness_probe": [
+                              {
+                                "exec": [],
+                                "failure_threshold": 3,
+                                "grpc": [],
+                                "http_get": [
+                                  {
+                                    "host": "",
+                                    "http_header": [],
+                                    "path": "/health",
+                                    "port": "8000",
+                                    "scheme": "HTTP"
+                                  }
+                                ],
+                                "initial_delay_seconds": 15,
+                                "period_seconds": 20,
+                                "success_threshold": 1,
+                                "tcp_socket": [],
+                                "timeout_seconds": 2
+                              }
+                            ],
+                            "name": "gamevault-api",
+                            "port": [
+                              {
+                                "container_port": 8000,
+                                "host_ip": "",
+                                "host_port": 0,
+                                "name": "http",
+                                "protocol": "TCP"
+                              }
+                            ],
+                            "readiness_probe": [
+                              {
+                                "exec": [],
+                                "failure_threshold": 3,
+                                "grpc": [],
+                                "http_get": [
+                                  {
+                                    "host": "",
+                                    "http_header": [],
+                                    "path": "/health",
+                                    "port": "8000",
+                                    "scheme": "HTTP"
+                                  }
+                                ],
+                                "initial_delay_seconds": 5,
+                                "period_seconds": 10,
+                                "success_threshold": 1,
+                                "tcp_socket": [],
+                                "timeout_seconds": 2
+                              }
+                            ],
+                            "resources": [
+                              {
+                                "limits": {
+                                  "cpu": "500m",
+                                  "memory": "512Mi"
+                                },
+                                "requests": {
+                                  "cpu": "100m",
+                                  "memory": "128Mi"
+                                }
+                              }
+                            ],
+                            "security_context": [],
+                            "startup_probe": [],
+                            "stdin": false,
+                            "stdin_once": false,
+                            "termination_message_path": "/dev/termination-log",
+                            "termination_message_policy": "",
+                            "tty": false,
+                            "volume_device": [],
+                            "volume_mount": [],
+                            "working_dir": ""
+                          }
+                        ],
+                        "dns_config": [],
+                        "dns_policy": "ClusterFirst",
+                        "enable_service_links": true,
+                        "host_aliases": [],
+                        "host_ipc": false,
+                        "host_network": false,
+                        "host_pid": false,
+                        "hostname": "",
+                        "image_pull_secrets": [],
+                        "init_container": [],
+                        "node_name": "",
+                        "node_selector": null,
+                        "os": [],
+                        "priority_class_name": "",
+                        "readiness_gate": [],
+                        "restart_policy": "Always",
+                        "runtime_class_name": "",
+                        "scheduler_name": "",
+                        "security_context": [],
+                        "service_account_name": "gamevault-service-account",
+                        "share_process_namespace": false,
+                        "subdomain": "",
+                        "termination_grace_period_seconds": 30,
+                        "toleration": [],
+                        "topology_spread_constraint": [],
+                        "volume": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_rollout": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": null,
+            "kind": null,
+            "name": null,
+            "namespace": null
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.ecr.aws_ecr_repository.api",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_config_map.gamevault",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.gamevault_kubernetes.kubernetes_service_account.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_deployment",
+      "name": "redis",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "id": "gamevault/redis-gamevault",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 1,
+                "labels": {
+                  "app": "redis-gamevault"
+                },
+                "name": "redis-gamevault",
+                "namespace": "gamevault",
+                "resource_version": "3242",
+                "uid": "cceec800-6e27-4f69-986f-6d0baf53f197"
+              }
+            ],
+            "spec": [
+              {
+                "min_ready_seconds": 0,
+                "paused": false,
+                "progress_deadline_seconds": 600,
+                "replicas": "1",
+                "revision_history_limit": 10,
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "app": "redis-gamevault"
+                    }
+                  }
+                ],
+                "strategy": [
+                  {
+                    "rolling_update": [
+                      {
+                        "max_surge": "25%",
+                        "max_unavailable": "25%"
+                      }
+                    ],
+                    "type": "RollingUpdate"
+                  }
+                ],
+                "template": [
+                  {
+                    "metadata": [
+                      {
+                        "annotations": null,
+                        "generate_name": "",
+                        "generation": 0,
+                        "labels": {
+                          "app": "redis-gamevault"
+                        },
+                        "name": "",
+                        "namespace": "",
+                        "resource_version": "",
+                        "uid": ""
+                      }
+                    ],
+                    "spec": [
+                      {
+                        "active_deadline_seconds": 0,
+                        "affinity": [],
+                        "automount_service_account_token": true,
+                        "container": [
+                          {
+                            "args": null,
+                            "command": null,
+                            "env": [],
+                            "env_from": [],
+                            "image": "redis:7-alpine",
+                            "image_pull_policy": "IfNotPresent",
+                            "lifecycle": [],
+                            "liveness_probe": [
+                              {
+                                "exec": [
+                                  {
+                                    "command": [
+                                      "redis-cli",
+                                      "ping"
+                                    ]
+                                  }
+                                ],
+                                "failure_threshold": 3,
+                                "grpc": [],
+                                "http_get": [],
+                                "initial_delay_seconds": 15,
+                                "period_seconds": 20,
+                                "success_threshold": 1,
+                                "tcp_socket": [],
+                                "timeout_seconds": 3
+                              }
+                            ],
+                            "name": "redis",
+                            "port": [
+                              {
+                                "container_port": 6379,
+                                "host_ip": "",
+                                "host_port": 0,
+                                "name": "redis",
+                                "protocol": "TCP"
+                              }
+                            ],
+                            "readiness_probe": [
+                              {
+                                "exec": [
+                                  {
+                                    "command": [
+                                      "redis-cli",
+                                      "ping"
+                                    ]
+                                  }
+                                ],
+                                "failure_threshold": 3,
+                                "grpc": [],
+                                "http_get": [],
+                                "initial_delay_seconds": 5,
+                                "period_seconds": 10,
+                                "success_threshold": 1,
+                                "tcp_socket": [],
+                                "timeout_seconds": 3
+                              }
+                            ],
+                            "resources": [
+                              {
+                                "limits": {
+                                  "cpu": "250m",
+                                  "memory": "256Mi"
+                                },
+                                "requests": {
+                                  "cpu": "50m",
+                                  "memory": "64Mi"
+                                }
+                              }
+                            ],
+                            "security_context": [],
+                            "startup_probe": [],
+                            "stdin": false,
+                            "stdin_once": false,
+                            "termination_message_path": "/dev/termination-log",
+                            "termination_message_policy": "File",
+                            "tty": false,
+                            "volume_device": [],
+                            "volume_mount": [],
+                            "working_dir": ""
+                          }
+                        ],
+                        "dns_config": [],
+                        "dns_policy": "ClusterFirst",
+                        "enable_service_links": true,
+                        "host_aliases": [],
+                        "host_ipc": false,
+                        "host_network": false,
+                        "host_pid": false,
+                        "hostname": "",
+                        "image_pull_secrets": [],
+                        "init_container": [],
+                        "node_name": "",
+                        "node_selector": null,
+                        "os": [],
+                        "priority_class_name": "",
+                        "readiness_gate": [],
+                        "restart_policy": "Always",
+                        "runtime_class_name": "",
+                        "scheduler_name": "default-scheduler",
+                        "security_context": [],
+                        "service_account_name": "",
+                        "share_process_namespace": false,
+                        "subdomain": "",
+                        "termination_grace_period_seconds": 30,
+                        "toleration": [],
+                        "topology_spread_constraint": [],
+                        "volume": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_rollout": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "apps/v1",
+            "kind": "Deployment",
+            "name": "redis-gamevault",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_deployment",
+      "name": "worker",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "status": "tainted",
+          "schema_version": 1,
+          "attributes": {
+            "id": "gamevault/gamevault-worker",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app": "gamevault-worker"
+                },
+                "name": "gamevault-worker",
+                "namespace": "gamevault",
+                "resource_version": "",
+                "uid": ""
+              }
+            ],
+            "spec": [
+              {
+                "min_ready_seconds": 0,
+                "paused": false,
+                "progress_deadline_seconds": 600,
+                "replicas": "3",
+                "revision_history_limit": 10,
+                "selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "app": "gamevault-worker"
+                    }
+                  }
+                ],
+                "strategy": [],
+                "template": [
+                  {
+                    "metadata": [
+                      {
+                        "annotations": null,
+                        "generate_name": "",
+                        "generation": 0,
+                        "labels": {
+                          "app": "gamevault-worker"
+                        },
+                        "name": "",
+                        "namespace": "",
+                        "resource_version": "",
+                        "uid": ""
+                      }
+                    ],
+                    "spec": [
+                      {
+                        "active_deadline_seconds": 0,
+                        "affinity": [],
+                        "automount_service_account_token": true,
+                        "container": [
+                          {
+                            "args": null,
+                            "command": null,
+                            "env": [
+                              {
+                                "name": "REDIS_HOST",
+                                "value": "redis-gamevault",
+                                "value_from": []
+                              },
+                              {
+                                "name": "REDIS_PORT",
+                                "value": "6379",
+                                "value_from": []
+                              },
+                              {
+                                "name": "REDIS_QUEUE",
+                                "value": "",
+                                "value_from": [
+                                  {
+                                    "config_map_key_ref": [
+                                      {
+                                        "key": "REDIS_QUEUE",
+                                        "name": "gamevault-config",
+                                        "optional": false
+                                      }
+                                    ],
+                                    "field_ref": [],
+                                    "resource_field_ref": [],
+                                    "secret_key_ref": []
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "POSTGRES_HOST",
+                                "value": "postgres-gamevault",
+                                "value_from": []
+                              },
+                              {
+                                "name": "POSTGRES_PORT",
+                                "value": "5432",
+                                "value_from": []
+                              },
+                              {
+                                "name": "POSTGRES_DB",
+                                "value": "",
+                                "value_from": [
+                                  {
+                                    "config_map_key_ref": [],
+                                    "field_ref": [],
+                                    "resource_field_ref": [],
+                                    "secret_key_ref": [
+                                      {
+                                        "key": "POSTGRES_DB",
+                                        "name": "postgres-gamevault-secret",
+                                        "optional": false
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "POSTGRES_USER",
+                                "value": "",
+                                "value_from": [
+                                  {
+                                    "config_map_key_ref": [],
+                                    "field_ref": [],
+                                    "resource_field_ref": [],
+                                    "secret_key_ref": [
+                                      {
+                                        "key": "POSTGRES_USER",
+                                        "name": "postgres-gamevault-secret",
+                                        "optional": false
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "POSTGRES_PASSWORD",
+                                "value": "",
+                                "value_from": [
+                                  {
+                                    "config_map_key_ref": [],
+                                    "field_ref": [],
+                                    "resource_field_ref": [],
+                                    "secret_key_ref": [
+                                      {
+                                        "key": "POSTGRES_PASSWORD",
+                                        "name": "postgres-gamevault-secret",
+                                        "optional": false
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "env_from": [],
+                            "image": "048364544760.dkr.ecr.ap-south-1.amazonaws.com/gamevault-worker:latest",
+                            "image_pull_policy": "",
+                            "lifecycle": [],
+                            "liveness_probe": [],
+                            "name": "gamevault-worker",
+                            "port": [],
+                            "readiness_probe": [],
+                            "resources": [
+                              {
+                                "limits": {
+                                  "cpu": "500m",
+                                  "memory": "512Mi"
+                                },
+                                "requests": {
+                                  "cpu": "100m",
+                                  "memory": "128Mi"
+                                }
+                              }
+                            ],
+                            "security_context": [],
+                            "startup_probe": [],
+                            "stdin": false,
+                            "stdin_once": false,
+                            "termination_message_path": "/dev/termination-log",
+                            "termination_message_policy": "",
+                            "tty": false,
+                            "volume_device": [],
+                            "volume_mount": [],
+                            "working_dir": ""
+                          }
+                        ],
+                        "dns_config": [],
+                        "dns_policy": "ClusterFirst",
+                        "enable_service_links": true,
+                        "host_aliases": [],
+                        "host_ipc": false,
+                        "host_network": false,
+                        "host_pid": false,
+                        "hostname": "",
+                        "image_pull_secrets": [],
+                        "init_container": [],
+                        "node_name": "",
+                        "node_selector": null,
+                        "os": [],
+                        "priority_class_name": "",
+                        "readiness_gate": [],
+                        "restart_policy": "Always",
+                        "runtime_class_name": "",
+                        "scheduler_name": "",
+                        "security_context": [],
+                        "service_account_name": "",
+                        "share_process_namespace": false,
+                        "subdomain": "",
+                        "termination_grace_period_seconds": 30,
+                        "toleration": [],
+                        "topology_spread_constraint": [],
+                        "volume": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_rollout": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": null,
+            "kind": null,
+            "name": null,
+            "namespace": null
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.ecr.aws_ecr_repository.worker",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_config_map.gamevault",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.gamevault_kubernetes.kubernetes_secret.postgres",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_ingress_v1",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault/gamevault-ingress",
+            "metadata": [
+              {
+                "annotations": {
+                  "alb.ingress.kubernetes.io/healthcheck-path": "/health",
+                  "alb.ingress.kubernetes.io/healthcheck-port": "traffic-port",
+                  "alb.ingress.kubernetes.io/listen-ports": "[{\"HTTP\":80}]",
+                  "alb.ingress.kubernetes.io/scheme": "internet-facing",
+                  "alb.ingress.kubernetes.io/target-type": "ip"
+                },
+                "generate_name": "",
+                "generation": 1,
+                "labels": null,
+                "name": "gamevault-ingress",
+                "namespace": "gamevault",
+                "resource_version": "3123",
+                "uid": "948ee53d-7ae4-4281-9327-f2c2e4685621"
+              }
+            ],
+            "spec": [
+              {
+                "default_backend": [],
+                "ingress_class_name": "alb",
+                "rule": [
+                  {
+                    "host": "",
+                    "http": [
+                      {
+                        "path": [
+                          {
+                            "backend": [
+                              {
+                                "resource": [],
+                                "service": [
+                                  {
+                                    "name": "gamevault-api-service",
+                                    "port": [
+                                      {
+                                        "name": "",
+                                        "number": 8000
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "path": "/",
+                            "path_type": "Prefix"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "tls": []
+              }
+            ],
+            "status": [
+              {
+                "load_balancer": [
+                  {
+                    "ingress": []
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_load_balancer": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "networking.k8s.io/v1",
+            "kind": "Ingress",
+            "name": "gamevault-ingress",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.gamevault_kubernetes.kubernetes_service.api",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_namespace",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "gamevault",
+                "resource_version": "3075",
+                "uid": "1a5c8c59-b390-4242-9628-e57c95c8c5db"
+              }
+            ],
+            "timeouts": null,
+            "wait_for_default_service_account": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "Namespace",
+            "name": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_network_policy",
+      "name": "postgres",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault/postgres-network-policy",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 1,
+                "labels": null,
+                "name": "postgres-network-policy",
+                "namespace": "gamevault",
+                "resource_version": "3086",
+                "uid": "5b94039a-04de-470f-88ee-f164bb2c9271"
+              }
+            ],
+            "spec": [
+              {
+                "egress": [],
+                "ingress": [
+                  {
+                    "from": [
+                      {
+                        "ip_block": [],
+                        "namespace_selector": [],
+                        "pod_selector": [
+                          {
+                            "match_expressions": [],
+                            "match_labels": {
+                              "app": "gamevault-api"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "ip_block": [],
+                        "namespace_selector": [],
+                        "pod_selector": [
+                          {
+                            "match_expressions": [],
+                            "match_labels": {
+                              "app": "gamevault-worker"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "ports": [
+                      {
+                        "end_port": 0,
+                        "port": "5432",
+                        "protocol": "TCP"
+                      }
+                    ]
+                  }
+                ],
+                "pod_selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "app": "postgres-gamevault"
+                    }
+                  }
+                ],
+                "policy_types": [
+                  "Ingress"
+                ]
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "name": "postgres-network-policy",
+            "namespace": "gamevault"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_network_policy",
+      "name": "redis",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault/redis-network-policy",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 1,
+                "labels": null,
+                "name": "redis-network-policy",
+                "namespace": "gamevault",
+                "resource_version": "3087",
+                "uid": "16ff0b7e-3af2-4265-a533-5e0ec1183862"
+              }
+            ],
+            "spec": [
+              {
+                "egress": [],
+                "ingress": [
+                  {
+                    "from": [
+                      {
+                        "ip_block": [],
+                        "namespace_selector": [],
+                        "pod_selector": [
+                          {
+                            "match_expressions": [],
+                            "match_labels": {
+                              "app": "gamevault-api"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "ip_block": [],
+                        "namespace_selector": [],
+                        "pod_selector": [
+                          {
+                            "match_expressions": [],
+                            "match_labels": {
+                              "app": "gamevault-worker"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "ports": [
+                      {
+                        "end_port": 0,
+                        "port": "6379",
+                        "protocol": "TCP"
+                      }
+                    ]
+                  }
+                ],
+                "pod_selector": [
+                  {
+                    "match_expressions": [],
+                    "match_labels": {
+                      "app": "redis-gamevault"
+                    }
+                  }
+                ],
+                "policy_types": [
+                  "Ingress"
+                ]
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "name": "redis-network-policy",
+            "namespace": "gamevault"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_persistent_volume_claim",
+      "name": "postgres",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "status": "tainted",
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault/postgres-pvc",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "postgres-pvc",
+                "namespace": "gamevault",
+                "resource_version": "",
+                "uid": ""
+              }
+            ],
+            "spec": [
+              {
+                "access_modes": [
+                  "ReadWriteOnce"
+                ],
+                "resources": [
+                  {
+                    "limits": null,
+                    "requests": {
+                      "storage": "5Gi"
+                    }
+                  }
+                ],
+                "selector": [],
+                "storage_class_name": "gamevault-gp3",
+                "volume_mode": "",
+                "volume_name": ""
+              }
+            ],
+            "timeouts": null,
+            "wait_until_bound": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_role",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault/gamevault-role",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "gamevault-role",
+                "namespace": "gamevault",
+                "resource_version": "3116",
+                "uid": "515e2449-d260-4362-9fdc-ef54fb6a650f"
+              }
+            ],
+            "rule": [
+              {
+                "api_groups": [
+                  ""
+                ],
+                "resource_names": null,
+                "resources": [
+                  "pods"
+                ],
+                "verbs": [
+                  "get",
+                  "list",
+                  "watch"
+                ]
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "rbac.authorization.k8s.io/v1",
+            "kind": "Role",
+            "name": "gamevault-role",
+            "namespace": "gamevault"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_role_binding",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "gamevault/gamevault-role-binding",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "gamevault-role-binding",
+                "namespace": "gamevault",
+                "resource_version": "3121",
+                "uid": "310318c9-d056-4ef9-9d65-4382c88b319c"
+              }
+            ],
+            "role_ref": [
+              {
+                "api_group": "rbac.authorization.k8s.io",
+                "kind": "Role",
+                "name": "gamevault-role"
+              }
+            ],
+            "subject": [
+              {
+                "api_group": "",
+                "kind": "ServiceAccount",
+                "name": "gamevault-service-account",
+                "namespace": "gamevault"
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "rbac.authorization.k8s.io/v1",
+            "kind": "RoleBinding",
+            "name": "gamevault-role-binding",
+            "namespace": "gamevault"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.gamevault_kubernetes.kubernetes_role.gamevault",
+            "module.gamevault_kubernetes.kubernetes_service_account.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_secret",
+      "name": "postgres",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "binary_data": null,
+            "binary_data_wo": null,
+            "binary_data_wo_revision": null,
+            "data": {
+              "POSTGRES_DB": "gamevault",
+              "POSTGRES_PASSWORD": "CHANGE_ME",
+              "POSTGRES_USER": "gamevault"
+            },
+            "data_wo": null,
+            "data_wo_revision": null,
+            "id": "gamevault/postgres-gamevault-secret",
+            "immutable": false,
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "postgres-gamevault-secret",
+                "namespace": "gamevault",
+                "resource_version": "3082",
+                "uid": "ead07d27-6a47-4736-973b-93aeea2afa49"
+              }
+            ],
+            "timeouts": null,
+            "type": "Opaque",
+            "wait_for_service_account_token": true
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "binary_data"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "data"
+              }
+            ],
+            [
+              {
+                "type": "get_attr",
+                "value": "data"
+              },
+              {
+                "type": "index",
+                "value": {
+                  "value": "POSTGRES_PASSWORD",
+                  "type": "string"
+                }
+              }
+            ]
+          ],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "Secret",
+            "name": "postgres-gamevault-secret",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_service",
+      "name": "api",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "id": "gamevault/gamevault-api-service",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app": "gamevault-api-service"
+                },
+                "name": "gamevault-api-service",
+                "namespace": "gamevault",
+                "resource_version": "3092",
+                "uid": "cb1d2086-e716-487c-90ee-5865ad0e45ef"
+              }
+            ],
+            "spec": [
+              {
+                "allocate_load_balancer_node_ports": true,
+                "cluster_ip": "172.20.174.100",
+                "cluster_ips": [
+                  "172.20.174.100"
+                ],
+                "external_ips": null,
+                "external_name": "",
+                "external_traffic_policy": "",
+                "health_check_node_port": 0,
+                "internal_traffic_policy": "Cluster",
+                "ip_families": [
+                  "IPv4"
+                ],
+                "ip_family_policy": "SingleStack",
+                "load_balancer_class": "",
+                "load_balancer_ip": "",
+                "load_balancer_source_ranges": null,
+                "port": [
+                  {
+                    "app_protocol": "",
+                    "name": "http",
+                    "node_port": 0,
+                    "port": 8000,
+                    "protocol": "TCP",
+                    "target_port": "8000"
+                  }
+                ],
+                "publish_not_ready_addresses": false,
+                "selector": {
+                  "app": "gamevault-api"
+                },
+                "session_affinity": "None",
+                "session_affinity_config": [],
+                "type": "ClusterIP"
+              }
+            ],
+            "status": [
+              {
+                "load_balancer": [
+                  {
+                    "ingress": []
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_load_balancer": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "Service",
+            "name": "gamevault-api-service",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_service",
+      "name": "postgres",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "id": "gamevault/postgres-gamevault",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app": "postgres-gamevault"
+                },
+                "name": "postgres-gamevault",
+                "namespace": "gamevault",
+                "resource_version": "3096",
+                "uid": "364b0c40-c56e-4489-93e8-034b293ae6fe"
+              }
+            ],
+            "spec": [
+              {
+                "allocate_load_balancer_node_ports": true,
+                "cluster_ip": "172.20.38.37",
+                "cluster_ips": [
+                  "172.20.38.37"
+                ],
+                "external_ips": null,
+                "external_name": "",
+                "external_traffic_policy": "",
+                "health_check_node_port": 0,
+                "internal_traffic_policy": "Cluster",
+                "ip_families": [
+                  "IPv4"
+                ],
+                "ip_family_policy": "SingleStack",
+                "load_balancer_class": "",
+                "load_balancer_ip": "",
+                "load_balancer_source_ranges": null,
+                "port": [
+                  {
+                    "app_protocol": "",
+                    "name": "postgres",
+                    "node_port": 0,
+                    "port": 5432,
+                    "protocol": "TCP",
+                    "target_port": "5432"
+                  }
+                ],
+                "publish_not_ready_addresses": false,
+                "selector": {
+                  "app": "postgres-gamevault"
+                },
+                "session_affinity": "None",
+                "session_affinity_config": [],
+                "type": "ClusterIP"
+              }
+            ],
+            "status": [
+              {
+                "load_balancer": [
+                  {
+                    "ingress": []
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_load_balancer": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "Service",
+            "name": "postgres-gamevault",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_service",
+      "name": "redis",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "id": "gamevault/redis-gamevault",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app": "redis-gamevault"
+                },
+                "name": "redis-gamevault",
+                "namespace": "gamevault",
+                "resource_version": "3088",
+                "uid": "0c7ea8ad-779d-431c-9f21-bb2457b39563"
+              }
+            ],
+            "spec": [
+              {
+                "allocate_load_balancer_node_ports": true,
+                "cluster_ip": "172.20.74.242",
+                "cluster_ips": [
+                  "172.20.74.242"
+                ],
+                "external_ips": null,
+                "external_name": "",
+                "external_traffic_policy": "",
+                "health_check_node_port": 0,
+                "internal_traffic_policy": "Cluster",
+                "ip_families": [
+                  "IPv4"
+                ],
+                "ip_family_policy": "SingleStack",
+                "load_balancer_class": "",
+                "load_balancer_ip": "",
+                "load_balancer_source_ranges": null,
+                "port": [
+                  {
+                    "app_protocol": "",
+                    "name": "redis",
+                    "node_port": 0,
+                    "port": 6379,
+                    "protocol": "TCP",
+                    "target_port": "6379"
+                  }
+                ],
+                "publish_not_ready_addresses": false,
+                "selector": {
+                  "app": "redis-gamevault"
+                },
+                "session_affinity": "None",
+                "session_affinity_config": [],
+                "type": "ClusterIP"
+              }
+            ],
+            "status": [
+              {
+                "load_balancer": [
+                  {
+                    "ingress": []
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "wait_for_load_balancer": true
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "Service",
+            "name": "redis-gamevault",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDB9LCJzY2hlbWFfdmVyc2lvbiI6IjEifQ==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_service_account",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "automount_service_account_token": true,
+            "default_secret_name": "",
+            "id": "gamevault/gamevault-service-account",
+            "image_pull_secret": [],
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "gamevault-service-account",
+                "namespace": "gamevault",
+                "resource_version": "3081",
+                "uid": "13ccd73b-b13a-4c6d-82ef-8792b7bee4c5"
+              }
+            ],
+            "secret": [],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 1,
+          "identity": {
+            "api_version": "v1",
+            "kind": "ServiceAccount",
+            "name": "gamevault-service-account",
+            "namespace": "gamevault"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.gamevault_kubernetes.kubernetes_namespace.gamevault",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.gamevault_kubernetes",
+      "mode": "managed",
+      "type": "kubernetes_storage_class_v1",
+      "name": "gp3",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allow_volume_expansion": true,
+            "allowed_topologies": [],
+            "id": "gamevault-gp3",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": null,
+                "name": "gamevault-gp3",
+                "resource_version": "3074",
+                "uid": "edbe99ca-956f-4231-8dd8-9a0ca639c55d"
+              }
+            ],
+            "mount_options": null,
+            "parameters": {
+              "type": "gp3"
+            },
+            "reclaim_policy": "Delete",
+            "storage_provisioner": "ebs.csi.aws.com",
+            "volume_binding_mode": "WaitForFirstConsumer"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.alb_controller.aws_iam_openid_connect_provider.eks",
+            "module.alb_controller.aws_iam_policy.alb_controller",
+            "module.alb_controller.aws_iam_role.alb_controller",
+            "module.alb_controller.aws_iam_role_policy_attachment.alb_controller",
+            "module.alb_controller.data.aws_caller_identity.current",
+            "module.alb_controller.data.aws_iam_policy_document.alb_controller_assume_role",
+            "module.alb_controller.data.tls_certificate.eks",
+            "module.alb_controller.helm_release.alb_controller",
+            "module.alb_controller.kubernetes_service_account.alb_controller",
+            "module.eks.aws_eks_addon.ebs_csi_driver",
+            "module.eks.aws_eks_addon.pod_identity_agent",
+            "module.eks.aws_eks_cluster.gamevault",
+            "module.eks.aws_eks_node_group.gamevault",
+            "module.eks.aws_iam_role.ebs_csi",
+            "module.eks.aws_iam_role.eks_cluster",
+            "module.eks.aws_iam_role.eks_nodes",
+            "module.eks.aws_iam_role_policy_attachment.ebs_csi",
+            "module.eks.aws_iam_role_policy_attachment.eks_cluster_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_cni_policy",
+            "module.eks.aws_iam_role_policy_attachment.eks_ecr_read_only",
+            "module.eks.aws_iam_role_policy_attachment.eks_worker_node_policy",
+            "module.eks.data.aws_iam_policy_document.ebs_csi_assume_role",
+            "module.network.aws_subnet.private",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_eip",
+      "name": "nat",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": null,
+            "allocation_id": "eipalloc-0474e87337ccfb274",
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:elastic-ip/eipalloc-0474e87337ccfb274",
+            "associate_with_private_ip": null,
+            "association_id": "",
+            "carrier_ip": "",
+            "customer_owned_ip": "",
+            "customer_owned_ipv4_pool": "",
+            "domain": "vpc",
+            "id": "eipalloc-0474e87337ccfb274",
+            "instance": "",
+            "ipam_pool_id": "",
+            "network_border_group": "ap-south-1",
+            "network_interface": "",
+            "private_dns": "",
+            "private_ip": "",
+            "ptr_record": "",
+            "public_dns": "ec2-13-205-218-44.ap-south-1.compute.amazonaws.com",
+            "public_ip": "13.205.218.44",
+            "public_ipv4_pool": "amazon",
+            "region": "ap-south-1",
+            "tags": {
+              "Name": "gamevault-vpc-nat-eip"
+            },
+            "tags_all": {
+              "Name": "gamevault-vpc-nat-eip"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "eipalloc-0474e87337ccfb274",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiZGVsZXRlIjoxODAwMDAwMDAwMDAsInJlYWQiOjkwMDAwMDAwMDAwMCwidXBkYXRlIjozMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_internet_gateway",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:internet-gateway/igw-0ac1b25c9fff49b68",
+            "id": "igw-0ac1b25c9fff49b68",
+            "owner_id": "048364544760",
+            "region": "ap-south-1",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-igw",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-igw",
+              "Project": "GameVault"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "igw-0ac1b25c9fff49b68",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_nat_gateway",
+      "name": "main",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_id": "eipalloc-0474e87337ccfb274",
+            "association_id": "eipassoc-008da7081a8e49cdf",
+            "auto_provision_zones": null,
+            "auto_scaling_ips": null,
+            "availability_mode": "zonal",
+            "availability_zone_address": [],
+            "connectivity_type": "public",
+            "id": "nat-00f67870c7d44f52f",
+            "network_interface_id": "eni-0f2cbed2bd9f6cb2c",
+            "private_ip": "10.0.1.180",
+            "public_ip": "13.205.218.44",
+            "region": "ap-south-1",
+            "regional_nat_gateway_address": [],
+            "regional_nat_gateway_auto_mode": null,
+            "route_table_id": null,
+            "secondary_allocation_ids": [],
+            "secondary_private_ip_address_count": 0,
+            "secondary_private_ip_addresses": [],
+            "subnet_id": "subnet-0e33ac613d1b803c4",
+            "tags": {
+              "Name": "gamevault-vpc-nat"
+            },
+            "tags_all": {
+              "Name": "gamevault-vpc-nat"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "nat-00f67870c7d44f52f",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTgwMDAwMDAwMDAwMCwidXBkYXRlIjo2MDAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "module.network.aws_eip.nat",
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_subnet.public",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:route-table/rtb-027ded78e408dcf70",
+            "id": "rtb-027ded78e408dcf70",
+            "owner_id": "048364544760",
+            "propagating_vgws": [],
+            "region": "ap-south-1",
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "nat-00f67870c7d44f52f",
+                "network_interface_id": "",
+                "odb_network_arn": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-private-rt",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-private-rt",
+              "Project": "GameVault"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "rtb-027ded78e408dcf70",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_eip.nat",
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_nat_gateway.main",
+            "module.network.aws_subnet.public",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_route_table",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:route-table/rtb-075c1dd36ee71ea7d",
+            "id": "rtb-075c1dd36ee71ea7d",
+            "owner_id": "048364544760",
+            "propagating_vgws": [],
+            "region": "ap-south-1",
+            "route": [
+              {
+                "carrier_gateway_id": "",
+                "cidr_block": "0.0.0.0/0",
+                "core_network_arn": "",
+                "destination_prefix_list_id": "",
+                "egress_only_gateway_id": "",
+                "gateway_id": "igw-0ac1b25c9fff49b68",
+                "ipv6_cidr_block": "",
+                "local_gateway_id": "",
+                "nat_gateway_id": "",
+                "network_interface_id": "",
+                "odb_network_arn": "",
+                "transit_gateway_id": "",
+                "vpc_endpoint_id": "",
+                "vpc_peering_connection_id": ""
+              }
+            ],
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-public-rt",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-public-rt",
+              "Project": "GameVault"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "rtb-075c1dd36ee71ea7d",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-0de5e848e93cd893e",
+            "region": "ap-south-1",
+            "route_table_id": "rtb-027ded78e408dcf70",
+            "subnet_id": "subnet-043eb3f0a2e294f23",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "rtbassoc-0de5e848e93cd893e",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_eip.nat",
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_nat_gateway.main",
+            "module.network.aws_route_table.private",
+            "module.network.aws_subnet.private",
+            "module.network.aws_subnet.public",
+            "module.network.aws_vpc.gamevault"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-055d40727487020cb",
+            "region": "ap-south-1",
+            "route_table_id": "rtb-027ded78e408dcf70",
+            "subnet_id": "subnet-050c5bcb2a9a4234b",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "rtbassoc-055d40727487020cb",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_eip.nat",
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_nat_gateway.main",
+            "module.network.aws_route_table.private",
+            "module.network.aws_subnet.private",
+            "module.network.aws_subnet.public",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_route_table_association",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-064cab0448cc09237",
+            "region": "ap-south-1",
+            "route_table_id": "rtb-075c1dd36ee71ea7d",
+            "subnet_id": "subnet-0e33ac613d1b803c4",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "rtbassoc-064cab0448cc09237",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_route_table.public",
+            "module.network.aws_subnet.public",
+            "module.network.aws_vpc.gamevault"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 0,
+          "attributes": {
+            "gateway_id": "",
+            "id": "rtbassoc-05abc9da6fb227170",
+            "region": "ap-south-1",
+            "route_table_id": "rtb-075c1dd36ee71ea7d",
+            "subnet_id": "subnet-0b48a41da7c1f657f",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "rtbassoc-05abc9da6fb227170",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.network.aws_internet_gateway.gamevault",
+            "module.network.aws_route_table.public",
+            "module.network.aws_subnet.public",
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_security_group",
+      "name": "alb",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:security-group/sg-0eab9e7e1e82d0ddf",
+            "description": "Security group for GameVault Application Load Balancer",
+            "egress": [
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "Allow outbound traffic",
+                "from_port": 0,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "-1",
+                "security_groups": [],
+                "self": false,
+                "to_port": 0
+              }
+            ],
+            "id": "sg-0eab9e7e1e82d0ddf",
+            "ingress": [
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "HTTP",
+                "from_port": 80,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 80
+              },
+              {
+                "cidr_blocks": [
+                  "0.0.0.0/0"
+                ],
+                "description": "HTTPS",
+                "from_port": 443,
+                "ipv6_cidr_blocks": [],
+                "prefix_list_ids": [],
+                "protocol": "tcp",
+                "security_groups": [],
+                "self": false,
+                "to_port": 443
+              }
+            ],
+            "name": "gamevault-vpc-alb-sg",
+            "name_prefix": "",
+            "owner_id": "048364544760",
+            "region": "ap-south-1",
+            "revoke_rules_on_delete": false,
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-alb-sg",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-alb-sg",
+              "Project": "GameVault"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "sg-0eab9e7e1e82d0ddf",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
+          "dependencies": [
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "private",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:subnet/subnet-043eb3f0a2e294f23",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-south-1a",
+            "availability_zone_id": "aps1-az1",
+            "cidr_block": "10.0.11.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-043eb3f0a2e294f23",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_ipam_pool_id": null,
+            "ipv6_native": false,
+            "ipv6_netmask_length": null,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "048364544760",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ap-south-1",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-private-1",
+              "Project": "GameVault",
+              "kubernetes.io/role/internal-elb": "1"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-private-1",
+              "Project": "GameVault",
+              "kubernetes.io/role/internal-elb": "1"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "subnet-043eb3f0a2e294f23",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.network.aws_vpc.gamevault"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:subnet/subnet-050c5bcb2a9a4234b",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-south-1b",
+            "availability_zone_id": "aps1-az3",
+            "cidr_block": "10.0.12.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-050c5bcb2a9a4234b",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_ipam_pool_id": null,
+            "ipv6_native": false,
+            "ipv6_netmask_length": null,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": false,
+            "outpost_arn": "",
+            "owner_id": "048364544760",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ap-south-1",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-private-2",
+              "Project": "GameVault",
+              "kubernetes.io/role/internal-elb": "1"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-private-2",
+              "Project": "GameVault",
+              "kubernetes.io/role/internal-elb": "1"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "subnet-050c5bcb2a9a4234b",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_subnet",
+      "name": "public",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:subnet/subnet-0e33ac613d1b803c4",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-south-1a",
+            "availability_zone_id": "aps1-az1",
+            "cidr_block": "10.0.1.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0e33ac613d1b803c4",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_ipam_pool_id": null,
+            "ipv6_native": false,
+            "ipv6_netmask_length": null,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "048364544760",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ap-south-1",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-public-1",
+              "Project": "GameVault",
+              "kubernetes.io/role/elb": "1"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-public-1",
+              "Project": "GameVault",
+              "kubernetes.io/role/elb": "1"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "subnet-0e33ac613d1b803c4",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.network.aws_vpc.gamevault"
+          ]
+        },
+        {
+          "index_key": 1,
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:subnet/subnet-0b48a41da7c1f657f",
+            "assign_ipv6_address_on_creation": false,
+            "availability_zone": "ap-south-1b",
+            "availability_zone_id": "aps1-az3",
+            "cidr_block": "10.0.2.0/24",
+            "customer_owned_ipv4_pool": "",
+            "enable_dns64": false,
+            "enable_lni_at_device_index": 0,
+            "enable_resource_name_dns_a_record_on_launch": false,
+            "enable_resource_name_dns_aaaa_record_on_launch": false,
+            "id": "subnet-0b48a41da7c1f657f",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_association_id": "",
+            "ipv6_ipam_pool_id": null,
+            "ipv6_native": false,
+            "ipv6_netmask_length": null,
+            "map_customer_owned_ip_on_launch": false,
+            "map_public_ip_on_launch": true,
+            "outpost_arn": "",
+            "owner_id": "048364544760",
+            "private_dns_hostname_type_on_launch": "ip-name",
+            "region": "ap-south-1",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-public-2",
+              "Project": "GameVault",
+              "kubernetes.io/role/elb": "1"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc-public-2",
+              "Project": "GameVault",
+              "kubernetes.io/role/elb": "1"
+            },
+            "timeouts": null,
+            "vpc_id": "vpc-00b6701d213f4fe87"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "subnet-0b48a41da7c1f657f",
+            "region": "ap-south-1"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "module.network.aws_vpc.gamevault"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.network",
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "gamevault",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "arn": "arn:aws:ec2:ap-south-1:048364544760:vpc/vpc-00b6701d213f4fe87",
+            "assign_generated_ipv6_cidr_block": false,
+            "cidr_block": "10.0.0.0/16",
+            "default_network_acl_id": "acl-048640f8f9000a00c",
+            "default_route_table_id": "rtb-0af375ab6b12fc004",
+            "default_security_group_id": "sg-0915e3f9a83fcd8b7",
+            "dhcp_options_id": "dopt-03bf5fe182a4f7bef",
+            "enable_dns_hostnames": true,
+            "enable_dns_support": true,
+            "enable_network_address_usage_metrics": false,
+            "id": "vpc-00b6701d213f4fe87",
+            "instance_tenancy": "default",
+            "ipv4_ipam_pool_id": null,
+            "ipv4_netmask_length": null,
+            "ipv6_association_id": "",
+            "ipv6_cidr_block": "",
+            "ipv6_cidr_block_network_border_group": "",
+            "ipv6_ipam_pool_id": "",
+            "ipv6_netmask_length": 0,
+            "main_route_table_id": "rtb-0af375ab6b12fc004",
+            "owner_id": "048364544760",
+            "region": "ap-south-1",
+            "tags": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc",
+              "Project": "GameVault"
+            },
+            "tags_all": {
+              "Environment": "dev",
+              "Name": "gamevault-vpc",
+              "Project": "GameVault"
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "048364544760",
+            "id": "vpc-00b6701d213f4fe87",
+            "region": "ap-south-1"
+          },
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": [
+    {
+      "object_kind": "var",
+      "config_addr": "module.network.var.private_subnet_cidrs",
+      "status": "pass",
+      "objects": [
+        {
+          "object_addr": "module.network.var.private_subnet_cidrs",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "var.environment",
+      "status": "pass",
+      "objects": [
+        {
+          "object_addr": "var.environment",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "object_kind": "var",
+      "config_addr": "module.network.var.public_subnet_cidrs",
+      "status": "pass",
+      "objects": [
+        {
+          "object_addr": "module.network.var.public_subnet_cidrs",
+          "status": "pass"
+        }
+      ]
+    }
+  ]
+}
+

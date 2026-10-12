@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: gamevault-network-policy-postgres
+  namespace: gamevault
+spec:
+  podSelector:
+    matchLabels:
+      app: postgres-gamevault
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: gamevault-api
+        - podSelector:
+            matchLabels:
+              app: worker-gamevault
+      ports:
+        - protocol: TCP
+          port: 5432
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: gamevault-network-policy-redis
+  namespace: gamevault
+spec:
+  podSelector:
+    matchLabels:
+      app: redis-gamevault
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: gamevault-api
+        - podSelector:
+            matchLabels:
+              app: worker-gamevault
+      ports:
+        - protocol: TCP
+          port: 6379
